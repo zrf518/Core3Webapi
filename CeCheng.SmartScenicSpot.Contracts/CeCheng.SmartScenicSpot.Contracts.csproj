@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <DocumentationFile>..\CeCheng.SmartScenicSpot.Webapi\SwaggerXml\contract.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CeCheng.SmartScenicSpot.Commoms\CeCheng.SmartScenicSpot.Commoms.csproj" />
+    <ProjectReference Include="..\CeCheng.SmartScenicSpot.Models\CeCheng.SmartScenicSpot.Models.csproj" />
+  </ItemGroup>
+
+</Project>

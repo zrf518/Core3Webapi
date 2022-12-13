@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CeCheng.SmartScenicSpot.Commoms\CeCheng.SmartScenicSpot.Commoms.csproj" />
+    <ProjectReference Include="..\CeCheng.SmartScenicSpot.Contracts\CeCheng.SmartScenicSpot.Contracts.csproj" />
+    <ProjectReference Include="..\CeCheng.SmartScenicSpot.Models\CeCheng.SmartScenicSpot.Models.csproj" />
+	  <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+		  <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <!--<ItemGroup>
+    <Reference Include="BouncyCastle.Crypto">
+      <HintPath>..\CeCheng.SmartScenicSpot.Webapi\bin\Debug\netcoreapp3.1\Dlls\paydlls\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+  </ItemGroup>-->
+
+</Project>

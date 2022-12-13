@@ -1,0 +1,3141 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ticket</name>
+    </assembly>
+    <members>
+        <member name="M:Ticket.CacheHelper.Delete(System.String)">
+            <summary>
+            删除缓存
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.CacheHelper.Exists(System.String)">
+            <summary>
+            判断缓存是否存在
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.CacheHelper.Get(System.String)">
+            <summary>
+            获取缓存
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.CacheHelper.Get``1(System.String)">
+            <summary>
+            获取缓存，指定类型
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.CacheHelper.Get``1(System.String[])">
+            <summary>
+            获取缓存
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="keys"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.CacheHelper.Set(System.String,System.Object,System.Int32)">
+            <summary>
+            设置缓存
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <param name="minute"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.CacheHelper.CreatePolicy(System.Nullable{System.TimeSpan},System.Nullable{System.DateTime})">
+            <summary>
+            设置过期信息
+            </summary>
+            <param name="slidingExpiration"></param>
+            <param name="absoluteExpiration"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Ticket.DbHelper">
+            <summary>
+            数据访问抽象基础类
+            Copyright (C) 2004-2008 By LiTianPing 
+            </summary>
+        </member>
+        <member name="M:Ticket.DbHelper.ColumnExists(System.String,System.String)">
+            <summary>
+            判断是否存在某表的某个字段
+            </summary>
+            <param name="tableName">表名称</param>
+            <param name="columnName">列名称</param>
+            <returns>是否存在</returns>
+        </member>
+        <member name="M:Ticket.DbHelper.TabExists(System.String)">
+            <summary>
+            表是否存在
+            </summary>
+            <param name="TableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.DbHelper.ExecuteSql(System.String)">
+            <summary>
+            执行SQL语句，返回影响的记录数
+            </summary>
+            <param name="SQLString">SQL语句</param>
+            <returns>影响的记录数</returns>
+        </member>
+        <member name="M:Ticket.DbHelper.ExecuteSqlTran(System.Collections.Generic.List{System.String})">
+            <summary>
+            执行多条SQL语句，实现数据库事务。
+            </summary>
+            <param name="SQLStringList">多条SQL语句</param>		
+        </member>
+        <member name="M:Ticket.DbHelper.ExecuteSql(System.String,System.String)">
+            <summary>
+            执行带一个存储过程参数的的SQL语句。
+            </summary>
+            <param name="SQLString">SQL语句</param>
+            <param name="content">参数内容,比如一个字段是格式复杂的文章，有特殊符号，可以通过这个方式添加</param>
+            <returns>影响的记录数</returns>
+        </member>
+        <member name="M:Ticket.DbHelper.ExecuteSqlGet(System.String,System.String)">
+            <summary>
+            执行带一个存储过程参数的的SQL语句。
+            </summary>
+            <param name="SQLString">SQL语句</param>
+            <param name="content">参数内容,比如一个字段是格式复杂的文章，有特殊符号，可以通过这个方式添加</param>
+            <returns>影响的记录数</returns>
+        </member>
+        <member name="M:Ticket.DbHelper.ExecuteSqlInsertImg(System.String,System.Byte[])">
+            <summary>
+            向数据库里插入图像格式的字段(和上面情况类似的另一种实例)
+            </summary>
+            <param name="strSQL">SQL语句</param>
+            <param name="fs">图像字节,数据库的字段类型为image的情况</param>
+            <returns>影响的记录数</returns>
+        </member>
+        <member name="M:Ticket.DbHelper.GetSingle(System.String)">
+            <summary>
+            执行一条计算查询结果语句，返回查询结果（object）。
+            </summary>
+            <param name="SQLString">计算查询结果语句</param>
+            <returns>查询结果（object）</returns>
+        </member>
+        <member name="M:Ticket.DbHelper.ExecuteReader(System.String)">
+            <summary>
+            执行查询语句，返回SqlDataReader ( 注意：调用该方法后，一定要对SqlDataReader进行Close )
+            </summary>
+            <param name="strSQL">查询语句</param>
+            <returns>SqlDataReader</returns>
+        </member>
+        <member name="M:Ticket.DbHelper.Query(System.String)">
+            <summary>
+            执行查询语句，返回DataSet
+            </summary>
+            <param name="SQLString">查询语句</param>
+            <returns>DataSet</returns>
+        </member>
+        <member name="M:Ticket.DbHelper.pageQuery(System.String,System.Int32,System.Int32)">
+            <summary>
+            执行查询语句，返回pageDataSet
+            </summary>
+            <param name="SQLString">查询语句</param>
+            <returns>DataSet</returns>
+        </member>
+        <member name="M:Ticket.DbHelper.ExecuteSql(System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            执行SQL语句，返回影响的记录数
+            </summary>
+            <param name="SQLString">SQL语句</param>
+            <returns>影响的记录数</returns>
+        </member>
+        <member name="M:Ticket.DbHelper.ExecuteSqlTran(System.Collections.Hashtable)">
+            <summary>
+            执行多条SQL语句，实现数据库事务。
+            </summary>
+            <param name="SQLStringList">SQL语句的哈希表（key为sql语句，value是该语句的SqlParameter[]）</param>
+        </member>
+        <member name="M:Ticket.DbHelper.ExecuteSqlTranWithIndentity(System.Collections.Hashtable)">
+            <summary>
+            执行多条SQL语句，实现数据库事务。
+            </summary>
+            <param name="SQLStringList">SQL语句的哈希表（key为sql语句，value是该语句的SqlParameter[]）</param>
+        </member>
+        <member name="M:Ticket.DbHelper.GetSingle(System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            执行一条计算查询结果语句，返回查询结果（object）。
+            </summary>
+            <param name="SQLString">计算查询结果语句</param>
+            <returns>查询结果（object）</returns>
+        </member>
+        <member name="M:Ticket.DbHelper.ExecuteReader(System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            执行查询语句，返回SqlDataReader ( 注意：调用该方法后，一定要对SqlDataReader进行Close )
+            </summary>
+            <param name="strSQL">查询语句</param>
+            <returns>SqlDataReader</returns>
+        </member>
+        <member name="M:Ticket.DbHelper.Query(System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            执行查询语句，返回DataSet
+            </summary>
+            <param name="SQLString">查询语句</param>
+            <returns>DataSet</returns>
+        </member>
+        <member name="M:Ticket.DbHelper.PageQuery(System.String,System.Int32,System.Int32,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            执行查询语句，返回DataSet
+            </summary>
+            <param name="SQLString">查询语句</param>
+            <returns>DataSet</returns>
+        </member>
+        <member name="M:Ticket.DbHelper.RunProcedure(System.String,System.Data.IDataParameter[])">
+            <summary>
+            执行存储过程，返回SqlDataReader ( 注意：调用该方法后，一定要对SqlDataReader进行Close )
+            </summary>
+            <param name="storedProcName">存储过程名</param>
+            <param name="parameters">存储过程参数</param>
+            <returns>SqlDataReader</returns>
+        </member>
+        <member name="M:Ticket.DbHelper.RunProcedure(System.String,System.Data.IDataParameter[],System.String)">
+            <summary>
+            执行存储过程
+            </summary>
+            <param name="storedProcName">存储过程名</param>
+            <param name="parameters">存储过程参数</param>
+            <param name="tableName">DataSet结果中的表名</param>
+            <returns>DataSet</returns>
+        </member>
+        <member name="M:Ticket.DbHelper.BuildQueryCommand(System.Data.SqlClient.SqlConnection,System.String,System.Data.IDataParameter[])">
+            <summary>
+            构建 SqlCommand 对象(用来返回一个结果集，而不是一个整数值)
+            </summary>
+            <param name="connection">数据库连接</param>
+            <param name="storedProcName">存储过程名</param>
+            <param name="parameters">存储过程参数</param>
+            <returns>SqlCommand</returns>
+        </member>
+        <member name="M:Ticket.DbHelper.RunProcedure(System.String,System.Data.IDataParameter[],System.Int32@)">
+            <summary>
+            执行存储过程，返回影响的行数		
+            </summary>
+            <param name="storedProcName">存储过程名</param>
+            <param name="parameters">存储过程参数</param>
+            <param name="rowsAffected">影响的行数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.DbHelper.BuildIntCommand(System.Data.SqlClient.SqlConnection,System.String,System.Data.IDataParameter[])">
+            <summary>
+            创建 SqlCommand 对象实例(用来返回一个整数值)	
+            </summary>
+            <param name="storedProcName">存储过程名</param>
+            <param name="parameters">存储过程参数</param>
+            <returns>SqlCommand 对象实例</returns>
+        </member>
+        <member name="M:Ticket.DbHelper.ExecuteTransaction(System.Collections.Generic.List{System.Data.SqlClient.SqlCommand})">
+            <summary>
+            执行T-SQL事务.
+            </summary>
+            <param name="cmds"></param>
+        </member>
+        <member name="M:Ticket.DbHelper.ExecutDataSet(System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            执行SQL查询语句，返回一个DataSet对象。
+            </summary>
+            <param name="sql"></param>
+            <param name="parames"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.DbHelper.ExecuteSqlToList``1(System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            执行SQL语句，返回一个对象列表。
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="sql"></param>
+            <param name="parames"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.DbHelper.ExecuteSqlObject``1(System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            执行SQL语句返回一个实体对象，如果存在多个对象则返回第一个。
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="sql"></param>
+            <param name="parames"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.DbHelper.ExecuteScalar(System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            执行SQL语句，返回受影响的第一行第一列。
+            </summary>
+            <param name="sql"></param>
+            <param name="parames"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.DbHelper.ExecuteNoQuery(System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            执行SQL语句返回受影响的行数。
+            </summary>
+            <param name="sql"></param>
+            <param name="parames"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.DbHelper.ExecuteNoQuery(System.String,System.String)">
+            <summary>
+            执行SQL语句返回受影响的行数。
+            </summary>
+            <param name="sql"></param>
+            <param name="parames"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.DbHelper.Query(System.String,System.String)">
+            <summary>
+            执行查询语句，返回DataSet
+            </summary>
+            <param name="SQLString">查询语句</param>
+            <returns>DataSet</returns>
+        </member>
+        <member name="M:Ticket.ExtMethod.ToList``1(System.Data.DataTable)">
+            <summary>
+            DataTable转List
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.DouYin.Common.GetParameters(System.String,System.String)">
+            <summary>
+            获取接口调用参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.DouYin.Common.UpdateParameters(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            更新
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.DouYin.Common.UpdateParametersAndTime(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            更新系统参数设置值和过期时间
+            </summary>
+            <param name="Value"></param>
+            <param name="Name"></param>
+            <param name="sTime"></param>
+            <param name="type"></param>
+            <param name="constr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.DouYin.Common.UpdateAlyParameters(System.String,System.String,System.String)">
+            <summary>
+            更新阿里云(120.76.98.184)上的sauna8_bz_TicketPlatform数据库MeituanSession表里面的所有的抖音的Token值和刷新时间
+            </summary>
+            <param name="client_key">策城抖音应用的client_key</param>
+            <param name="refresh_token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.DouYin.Common.GetAlyParameters(System.String)">
+            <summary>
+            获取阿里云(120.76.98.184)上的sauna8_bz_TicketPlatform数据库MeituanSession表里面的所有的抖音的Token值和刷新时间
+            </summary>
+            <param name="client_key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.DouYin.Common.GetForString(System.String,System.String)">
+            <summary>
+            Get接口调用
+            </summary>
+            <param name="para">参数</param>
+            <param name="url">接口路径</param>
+            <returns>Json格式</returns>
+        </member>
+        <member name="M:Ticket.DouYin.Common.PostForEntiy``1(``0,System.String)">
+            <summary>
+            POST接口调用
+            </summary>
+            <param name="entity">参数值</param>
+            <param name="url">接口路径</param>
+            <returns>Json格式</returns>
+        </member>
+        <member name="M:Ticket.DouYin.Common.PostHttpResponse(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Text.Encoding)">
+            <summary>
+            POS请求
+            </summary>
+            <param name="url"></param>
+            <param name="parameters"></param>
+            <param name="charset"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.DouYin.Common.WriteFile(System.String,System.String)">
+            <summary>
+            保存接口返回结果到文件中
+            </summary>
+            <param name="title">日志标题</param>
+            <param name="datastr">日志内容</param>
+        </member>
+        <member name="M:Ticket.DouYin.Common.Hmac(System.String,System.String)">
+            <summary>
+            生成签名
+            </summary>
+            <param name="param"></param>
+            <param name="appSecret"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.DouYin.Common.ErrorMessage(System.String)">
+            <summary>
+            错误信息
+            </summary>
+            <param name="erroecode">错误码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.DouYin.Common.GetForString1(System.String,System.String)">
+            <summary>
+            Get接口调用
+            </summary>
+            <param name="para">参数</param>
+            <param name="url">接口路径</param>
+            <returns>Json格式</returns>
+        </member>
+        <member name="M:Ticket.DouYin.Common.PostHttpResponse1(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Text.Encoding)">
+            <summary>
+            POS请求
+            </summary>
+            <param name="url"></param>
+            <param name="parameters"></param>
+            <param name="charset"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.DouYin.Common.MakeSign(System.String)">
+            <summary>
+            签名
+            </summary>
+            <param name="para"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Ticket.DouYin.TicketCheck">
+            <summary>
+            抖音验票 open.douyin.com
+            </summary>
+        </member>
+        <member name="M:Ticket.DouYin.TicketCheck.#ctor(System.String,System.String,System.String)">
+            <summary>
+            构造方法初始化参数
+            </summary>
+        </member>
+        <member name="M:Ticket.DouYin.TicketCheck.QueryTicketInfo(System.String)">
+            <summary>
+            输码验券校验
+            </summary>
+            <param name="encrypted_code">验券准备接口返回的加密券码（传参前需要先进行URL编码）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.DouYin.TicketCheck.Consume(System.String,System.String,System.String@)">
+            <summary>
+            验券
+            </summary>
+            <param name="requestid">请求id，用于标识幂等性</param>
+            <param name="receipt_code">团购券码，必须未验证</param>
+            <param name="count">验券数量, 不可多于100个</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.DouYin.TicketCheck.GetTokenFrom184DB">
+            <summary>
+            阿里云(120.76.98.184)上的sauna8_bz_TicketPlatform数据库里获取token值
+            </summary>
+        </member>
+        <member name="M:Ticket.DouYin.TicketCheck.ReverseConsume(System.String,System.String,System.String)">
+            <summary>
+            撤销验券接口
+            </summary>
+            <param name="requestid">请求id，用于标识幂等性</param>
+            <param name="verify_id">代表券码一次核销的唯一标识(验券时返回)</param>
+            <param name="certificate_id">代表一张券码的标识(验券时返回)</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.DouYin.TicketCheck.Auth(System.String,System.String)">
+            <summary>
+            授权
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.DouYin.TicketCheck.RefreshToken">
+            <summary>
+            Token刷新接口
+            </summary>
+        </member>
+        <member name="T:Ticket.DouYin.TicketCheckThird">
+            <summary>
+            香水皇宫验票 open.douyin.com
+            </summary>
+        </member>
+        <member name="M:Ticket.DouYin.TicketCheckThird.#ctor(System.String,System.String,System.String)">
+            <summary>
+            构造方法初始化参数
+            </summary>
+        </member>
+        <member name="M:Ticket.DouYin.TicketCheckThird.QueryTicketInfoXSHG(System.String)">
+            <summary>
+            香水皇宫查券
+            </summary>
+            <param name="encrypted_code">验券准备接口返回的加密券码（传参前需要先进行URL编码）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.DouYin.TicketCheckThird.ConsumeXSHG(System.String,System.String)">
+            <summary>
+            香水皇宫验券
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.KouBei.AlipayTrade.#ctor(System.String,System.String,System.String)">
+            <summary>
+            构造方法初始化参数
+            </summary>
+        </member>
+        <member name="M:Ticket.KouBei.AlipayTrade.Precreate(System.String,System.Decimal,System.String,System.String,System.String,System.Int32,System.Decimal)">
+            <summary>
+            收银员通过收银台或商户后台调用支付宝接口，生成二维码后，展示给用户，由用户扫描二维码完成订单支付。
+            </summary>
+            <param name="out_trade_no">商户订单号,64个字符以内、只能包含字母、数字、下划线；需保证在商户端不重复</param>
+            <param name="total_amount">订单总金额，单位为元，精确到小数点后两位，取值范围[0.01,100000000] </param>
+            <param name="subject">订单标题</param>
+            <param name="store_id">商户门店编号</param>
+            <param name="goods_id">商品的编号</param>
+            <param name="goods_name">商品名称</param>
+            <param name="quantity">商品数量</param>
+            <param name="price">商品单价，单位为元(原价)</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.KouBei.AlipayTrade.Pay(System.String,System.String,System.String,System.Decimal,System.String,System.String,System.String,System.Int32,System.Decimal,System.String,System.String)">
+            <summary>
+            统一收单交易支付接口
+            </summary>
+            <param name="out_trade_no">商户订单号,64个字符以内、可包含字母、数字、下划线；需保证在商户端不重复</param>
+            <param name="auth_code">支付授权码，25~30开头的长度为16~24位的数字，实际字符串长度以开发者获取的付款码长度为准</param>
+            <param name="subject">订单标题</param>
+            <param name="scene">支付场景： 条码支付，取值：bar_code ；声波支付，取值：wave_code</param>
+            <param name="store_id">商户门店编号</param>
+            <param name="good">商品信息</param>
+        </member>
+        <member name="M:Ticket.KouBei.AlipayTrade.Query(System.String)">
+            <summary>
+            统一收单线下交易查询
+            该接口提供所有支付宝支付订单的查询，商户可以通过该接口主动查询订单状态，完成下一步的业务逻辑。
+            需要调用查询接口的情况：
+            当商户后台、网络、服务器等出现异常，商户系统最终未接收到支付通知；
+            调用支付接口后，返回系统错误或未知交易状态情况；
+            调用alipay.trade.pay，返回INPROCESS的状态； 调用alipay.trade.cancel之前，需确认支付状态；
+            </summary>
+            <param name="out_trade_no">订单支付时传入的商户订单号</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.KouBei.AlipayTrade.Refund(System.String,System.Decimal)">
+            <summary>
+            统一收单交易退款接口
+            当交易发生之后一段时间内，由于买家或者卖家的原因需要退款时，卖家可以通过退款接口将支付款退还给买家，支付宝将在收到退款请求并且验证成功之后，按照退款规则将支付款按原路退到买家帐号上。
+            交易超过约定时间（签约时设置的可退款时间）的订单无法进行退款 支付宝退款支持单笔交易分多次退款，多次退款需要提交原支付订单的商户订单号和设置不同的退款单号。
+            一笔退款失败后重新提交，要采用原来的退款单号。总退款金额不能超过用户实际支付金额
+            </summary>
+            <param name="out_trade_no"></param>
+            <param name="refund_amount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.KouBei.AlipayTrade.RefundQuery(System.String)">
+            <summary>
+            商户可使用该接口查询自已通过alipay.trade.refund提交的退款请求是否执行成功。
+            该接口的返回码10000，仅代表本次查询操作成功，不代表退款成功。
+            如果该接口返回了查询数据，则代表退款成功，如果没有查询到则代表未退款成功，可以调用退款接口进行重试。
+            重试时请务必保证退款请求号一致。
+            </summary>
+            <param name="out_trade_no"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.KouBei.AlipayTrade.Close(System.String)">
+            <summary>
+            统一收单交易关闭接口
+            用于交易创建后，用户在一定时间内未进行支付，可调用该接口直接将未付款的交易进行关闭。
+            </summary>
+            <param name="out_trade_no">订单支付时传入的商户订单号</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.KouBei.AlipayTrade.Cancel(System.String)">
+            <summary>
+            统一收单交易撤销接口
+            支付交易返回失败或支付系统超时，调用该接口撤销交易。如果此订单用户支付失败，支付宝系统会将此订单关闭；
+            如果用户支付成功，支付宝系统会将此订单资金退还给用户。
+            注意：只有发生支付系统超时或者支付结果未知时可调用撤销，其他正常支付的单如需实现相同功能请调用申请退款API。
+            提交支付交易后调用【查询订单API】，没有明确的支付结果再调用【撤销订单API】。
+            </summary>
+            <param name="out_trade_no"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.KouBei.AlipayTrade.RelationModify(System.String,System.String,System.String,System.Int32,System.String,System.String,System.String,System.String)">
+            <summary>
+            用户会员修改
+            </summary>
+            <param name="user_id">用户id</param>
+            <param name="member_template_id">会员模版id</param>
+            <param name="out_member_no">商户外部会员号</param>
+            <param name="level">新的等级（不修改不传）</param>
+            <param name="start_time">会员开始时间</param>
+            <param name="end_time">会员过期时间</param>
+            <param name="activate_time">会员开通时间</param>
+            <param name="point">积分</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.KouBei.AuthorToken.#ctor(System.String,System.String,System.String)">
+            <summary>
+            构造方法初始化参数
+            </summary>
+        </member>
+        <!-- 对于成员“M:Ticket.KouBei.AuthorToken.GetAppToken(System.String)”忽略有格式错误的 XML 注释 -->
+        <member name="M:Ticket.KouBei.AuthorToken.GetOauthToken(System.String)">
+            <summary>
+            兑换用户授权令牌
+            https://docs.open.alipay.com/api_9/alipay.system.oauth.token
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Ticket.KouBei.Common">
+            <summary>
+            公共方法
+            </summary>
+        </member>
+        <member name="M:Ticket.KouBei.Common.MakeSign(System.String,System.String)">
+            <summary>
+            签名
+            </summary>
+            <param name="para"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.KouBei.Common.PostForEntiy``1(``0,System.String)">
+            <summary>
+            POST接口调用
+            </summary>
+            <param name="entity">参数值</param>
+            <param name="url">接口路径</param>
+            <returns>Json格式</returns>
+        </member>
+        <member name="M:Ticket.KouBei.Common.GetForString(System.String,System.String)">
+            <summary>
+            Get接口调用
+            </summary>
+            <param name="para">参数</param>
+            <param name="url">接口路径</param>
+            <returns>Json格式</returns>
+        </member>
+        <member name="M:Ticket.KouBei.Common.GetParameters(System.String,System.String)">
+            <summary>
+            获取接口调用参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.KouBei.Common.AddParameters(System.String,System.String,System.String)">
+            <summary>
+            添加是否加密的标志
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.KouBei.Common.WriteFile(System.String,System.String)">
+            <summary>
+            保存接口返回结果到文件中
+            </summary>
+            <param name="title">日志标题</param>
+            <param name="datastr">日志内容</param>
+        </member>
+        <member name="F:Ticket.KouBei.Common.Key">
+            <summary>
+            密钥
+            </summary>
+        </member>
+        <member name="M:Ticket.KouBei.Common.AESEncrypt(System.String,System.String[])">
+            <summary>
+            AES加密
+            </summary>
+            <param name="value">需要加密的字符串。</param>
+            <param name="key">密钥。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.KouBei.Common.AESDecrypt(System.String,System.String[])">
+            <summary>
+            AES解密
+            </summary>
+            <param name="value">需要解密的字符串。</param>
+            <param name="key">密钥。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.KouBei.Common.MD5Encrypt(System.String)">
+            <summary>
+            MD5加密字符串。
+            </summary>
+            <param name="value">需要加密的字符串。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.KouBei.HttpCommon.generateAuthAndDateHeader(System.String,System.Net.HttpWebRequest,System.String,System.String,System.String)">
+            <summary>
+            生成报文头
+            </summary>
+            <param name="url">请求地址</param>
+            <param name="request"></param>
+            <param name="clientId"></param>
+            <param name="clientSecret"></param>
+            <param name="partnerId">合作方ID</param>
+        </member>
+        <member name="M:Ticket.KouBei.HttpCommon.CallPrivateMethod(System.Object,System.String,System.Object[])">
+            <summary>
+            http头中的Date不能修改，所以调用反射修改
+            </summary>
+            <param name="instance">要修改的对象</param>
+            <param name="name">调用方法名</param>
+            <param name="param"></param>
+        </member>
+        <member name="M:Ticket.KouBei.HttpCommon.ToBase64hmac(System.String,System.String)">
+            <summary>
+            HMACSHA1算法加密并返回ToBase64String
+            </summary>
+            <param name="strText">签名参数字符串</param>
+            <param name="strKey">密钥参数</param>
+            <returns>返回一个签名值(即哈希值)</returns>
+        </member>
+        <member name="M:Ticket.KouBei.HttpCommon.Post(System.Net.HttpWebRequest,System.String)">
+            <summary>
+            POST整个字符串到URL地址中
+            </summary>
+            <param name="Url"></param>
+            <param name="jsonParas"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.KouBei.HttpCommon.GuidTo16String">
+            <summary>
+            根据GUID生成16位GUID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Ticket.KouBei.Models.Goods.Goods_id">
+            <summary>
+            商品的编号
+            </summary>
+        </member>
+        <member name="P:Ticket.KouBei.Models.Goods.Goods_name">
+            <summary>
+            商品名称
+            </summary>
+        </member>
+        <member name="P:Ticket.KouBei.Models.Goods.Quantity">
+            <summary>
+            商品数量
+            </summary>
+        </member>
+        <member name="F:Ticket.KouBei.Models.Goods.price">
+            <summary>
+            商品单价，单位为元
+            </summary>
+        </member>
+        <member name="M:Ticket.KouBei.TicketCode.#ctor(System.String,System.String,System.String)">
+            <summary>
+            构造方法初始化参数
+            </summary>
+        </member>
+        <member name="M:Ticket.KouBei.TicketCode.Use(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+             口碑核销：https://docs.open.alipay.com/api_5/koubei.trade.ticket.ticketcode.use
+             口碑凭证码核销
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.KouBei.TicketCode.QueryByUserId(System.String,System.String)">
+            <summary>
+            根据用户id查询用户可用凭证
+            </summary>
+            <param name="user_id">用户id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.MaoZhuaGu.Common.GetParameters(System.String,System.String)">
+            <summary>
+            描述：
+            获取接口调用参数
+            </summary>
+            <param name="type">分组</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ticket.MaoZhuaGu.Extensions">
+            <summary>
+            扩展方法
+            </summary>
+        </member>
+        <member name="M:Ticket.MaoZhuaGu.Extensions.GetMD5(System.String)">
+            <summary>
+            描述：
+            MD5加密
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.MaoZhuaGu.Extensions.ToUnix(System.String)">
+            <summary>
+            描述：
+            转Unix时间
+            </summary>
+            <param name="time"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.MaoZhuaGu.Extensions.ToTime(System.String)">
+            <summary>
+            描述：
+            Unix时间格式化
+            </summary>
+            <param name="time"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.MaoZhuaGu.Extensions.Post``2(System.String,``0)">
+            <summary>
+            描述：
+            Post请求
+            </summary>
+            <typeparam name="T">请求实体</typeparam>
+            <typeparam name="TV">返回实体</typeparam>
+            <param name="url">请求地址</param>
+            <param name="entity">请求实体</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ticket.MaoZhuaGu.BaseReq">
+            <summary>
+            请求类基类
+            </summary>
+        </member>
+        <member name="P:Ticket.MaoZhuaGu.BaseReq.appid">
+            <summary>
+            分配的appid
+            </summary>
+        </member>
+        <member name="P:Ticket.MaoZhuaGu.BaseReq.appsecret">
+            <summary>
+            对应的appsecret
+            </summary>
+        </member>
+        <member name="P:Ticket.MaoZhuaGu.BaseReq.sign">
+            <summary>
+            通过签名算法计算出的签名值
+            </summary>
+        </member>
+        <member name="P:Ticket.MaoZhuaGu.GetAllTicketProductVoReq.pageno">
+            <summary>
+            页码;从1开始
+            </summary>
+        </member>
+        <member name="P:Ticket.MaoZhuaGu.GetAllTicketProductVoReq.pagesize">
+            <summary>
+            每页条数；取值范围 10~100
+            </summary>
+        </member>
+        <member name="P:Ticket.MaoZhuaGu.GetAllTicketProductVoReq.starttime">
+            <summary>
+            开始时间，时间戳，注：时间单位为毫秒
+            </summary>
+        </member>
+        <member name="P:Ticket.MaoZhuaGu.GetAllTicketProductVoReq.endtime">
+            <summary>
+            结束时间，时间戳，注：时间单位为毫秒
+            </summary>
+        </member>
+        <member name="M:Ticket.MaoZhuaGu.GetAllTicketProductVoReq.GetSign">
+            <summary>
+            描述：
+            获取sign值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Ticket.MaoZhuaGu.GetTicketProductListVoReq">
+            <summary>
+            门票商品列表请求类
+            </summary>
+        </member>
+        <member name="M:Ticket.MaoZhuaGu.GetTicketProductListVoReq.GetSign">
+            <summary>
+            描述：
+            获取sign值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Ticket.MaoZhuaGu.GetTicketProductVoReq.osn">
+            <summary>
+            订单号
+            </summary>
+        </member>
+        <member name="M:Ticket.MaoZhuaGu.GetTicketProductVoReq.GetSign">
+            <summary>
+            描述：
+            获取sign值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Ticket.MaoZhuaGu.PostTicketVerificationReq">
+            <summary>
+            闸机验票请求类
+            </summary>
+        </member>
+        <member name="P:Ticket.MaoZhuaGu.PostTicketVerificationReq.mdi">
+            <summary>
+            门票码
+            </summary>
+        </member>
+        <member name="M:Ticket.MaoZhuaGu.PostTicketVerificationReq.GetSign">
+            <summary>
+            描述：
+            获取sign值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Ticket.MaoZhuaGu.Result">
+            <summary>
+            猫爪谷通用返回类
+            </summary>
+        </member>
+        <member name="P:Ticket.MaoZhuaGu.Result.code">
+            <summary>
+            消息码 0成功; 非0失败
+            </summary>
+        </member>
+        <member name="P:Ticket.MaoZhuaGu.Result.message">
+            <summary>
+            返回消息
+            </summary>
+        </member>
+        <member name="P:Ticket.MaoZhuaGu.Result.result">
+            <summary>
+            返回结果
+            </summary>
+        </member>
+        <member name="M:Ticket.MaoZhuaGu.Result.SetSuccess(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="code"></param>
+            <param name="msg"></param>
+        </member>
+        <member name="P:Ticket.MaoZhuaGu.Result`1.code">
+            <summary>
+            消息码 0成功; 非0失败
+            </summary>
+        </member>
+        <member name="P:Ticket.MaoZhuaGu.Result`1.message">
+            <summary>
+            返回消息
+            </summary>
+        </member>
+        <member name="P:Ticket.MaoZhuaGu.Result`1.result">
+            <summary>
+            返回结果
+            </summary>
+        </member>
+        <member name="M:Ticket.MaoZhuaGu.Result`1.SetSuccess(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="code"></param>
+            <param name="msg"></param>
+        </member>
+        <member name="T:Ticket.MaoZhuaGu.TicketOrderVo">
+            <summary>
+            门票订单列表(单个)
+            </summary>
+        </member>
+        <member name="P:Ticket.MaoZhuaGu.TicketOrderVo.Osn">
+            <summary>
+            订单号
+            </summary>
+        </member>
+        <member name="P:Ticket.MaoZhuaGu.TicketOrderVo.cpname">
+            <summary>
+            商品名 如：门票
+            </summary>
+        </member>
+        <member name="P:Ticket.MaoZhuaGu.TicketOrderVo.orderstatus">
+            <summary>
+            订单状态 自营0未支付 1已支付 2已完成 3已退款
+            </summary>
+        </member>
+        <member name="P:Ticket.MaoZhuaGu.TicketOrderVo.useday">
+            <summary>
+            有效日期起始日期
+            </summary>
+        </member>
+        <member name="P:Ticket.MaoZhuaGu.TicketOrderVo.useendday">
+            <summary>
+            有效日期结束日期
+            </summary>
+        </member>
+        <member name="P:Ticket.MaoZhuaGu.TicketOrderVo.ordertime">
+            <summary>
+            购票时间
+            </summary>
+        </member>
+        <member name="P:Ticket.MaoZhuaGu.TicketOrderVo.eptime">
+            <summary>
+            过期时间
+            </summary>
+        </member>
+        <member name="P:Ticket.MaoZhuaGu.TicketOrderVo.cost">
+            <summary>
+            购票金额
+            </summary>
+        </member>
+        <member name="P:Ticket.MaoZhuaGu.TicketOrderVo.num">
+            <summary>
+            购票数量
+            </summary>
+        </member>
+        <member name="P:Ticket.MaoZhuaGu.TicketOrderVo.hxnum">
+            <summary>
+            已核销人数
+            </summary>
+        </member>
+        <member name="P:Ticket.MaoZhuaGu.TicketOrderVo.quitnum">
+            <summary>
+            退款人数
+            </summary>
+        </member>
+        <member name="P:Ticket.MaoZhuaGu.TicketOrderVo.remainnum">
+            <summary>
+            剩余可核销人数
+            </summary>
+        </member>
+        <member name="P:Ticket.MaoZhuaGu.TicketOrderVo.remarks">
+            <summary>
+            备注说明
+            </summary>
+        </member>
+        <member name="P:Ticket.MaoZhuaGu.TicketOrderVo.username">
+            <summary>
+            购买人
+            </summary>
+        </member>
+        <member name="P:Ticket.MaoZhuaGu.TicketOrderVo.umobile">
+            <summary>
+            联系电话
+            </summary>
+        </member>
+        <member name="P:Ticket.MaoZhuaGu.TicketOrderVo.uidcard">
+            <summary>
+            身份证号
+            </summary>
+        </member>
+        <member name="P:Ticket.MaoZhuaGu.TicketOrderVo.tpid">
+            <summary>
+            商品id
+            </summary>
+        </member>
+        <member name="T:Ticket.MaoZhuaGu.BatchTicketOrderVo">
+            <summary>
+            门票订单列表(含订单详情)
+            </summary>
+        </member>
+        <member name="P:Ticket.MaoZhuaGu.BatchTicketOrderVo.totalRows">
+            <summary>
+            总记录数
+            </summary>
+        </member>
+        <member name="P:Ticket.MaoZhuaGu.BatchTicketOrderVo.pageSize">
+            <summary>
+            返回当前请求记录数
+            </summary>
+        </member>
+        <member name="P:Ticket.MaoZhuaGu.BatchTicketOrderVo.items">
+            <summary>
+            记录明细列表
+            </summary>
+        </member>
+        <member name="T:Ticket.MaoZhuaGu.TicketType">
+            <summary>
+            套票类型
+            </summary>
+        </member>
+        <member name="P:Ticket.MaoZhuaGu.TicketType.id">
+            <summary>
+            商品id
+            </summary>
+        </member>
+        <member name="P:Ticket.MaoZhuaGu.TicketType.pname">
+            <summary>
+            商品名称
+            </summary>
+        </member>
+        <member name="P:Ticket.MaoZhuaGu.TicketType.flag">
+            <summary>
+            订单状态 0下架 1上架
+            </summary>
+        </member>
+        <member name="P:Ticket.MaoZhuaGu.TicketType.price">
+            <summary>
+            门票价格 实际销售价
+            </summary>
+        </member>
+        <member name="P:Ticket.MaoZhuaGu.TicketType.adult_price">
+            <summary>
+            票面价
+            </summary>
+        </member>
+        <member name="M:Ticket.MaoZhuaGu.OrderCheck.#ctor(System.String,System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="type"></param>
+        </member>
+        <member name="F:Ticket.MaoZhuaGu.OrderCheck._url">
+            <summary>
+            接口域名
+            </summary>
+        </member>
+        <member name="F:Ticket.MaoZhuaGu.OrderCheck._getTicketProductVoUrl">
+            <summary>
+            获取门票订单详情
+            </summary>
+        </member>
+        <member name="F:Ticket.MaoZhuaGu.OrderCheck._getallTicketProductVoUrl">
+            <summary>
+            获取门票订单详情
+            </summary>
+        </member>
+        <member name="F:Ticket.MaoZhuaGu.OrderCheck._postTicketVerificationUrl">
+            <summary>
+            闸机核销地址
+            </summary>
+        </member>
+        <member name="F:Ticket.MaoZhuaGu.OrderCheck._getTicketProductListVoUrl">
+            <summary>
+            获取门票商品列表
+            </summary>
+        </member>
+        <member name="F:Ticket.MaoZhuaGu.OrderCheck.appId">
+            <summary>
+            客户appId
+            </summary>
+        </member>
+        <member name="F:Ticket.MaoZhuaGu.OrderCheck.appSecret">
+            <summary>
+            客户appSecret
+            </summary>
+        </member>
+        <member name="M:Ticket.MaoZhuaGu.OrderCheck.GetTicketProductListVo">
+            <summary>
+            描述：
+            获取门票商品列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.MaoZhuaGu.OrderCheck.GetTicketProductVo(System.String)">
+            <summary>
+            描述：
+            查询订单信息
+            </summary>
+            <param name="osn">订单号</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.MaoZhuaGu.OrderCheck.GetAllTicketProductVo(System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            描述：
+            获取门票订单列表(含订单详情)
+            </summary>
+            <param name="pageNo">页码 从1开始</param>
+            <param name="pageSize">每页条数 取值范围10~100</param>
+            <param name="startTime">开始时间 默认为空,传输请精确到毫秒，例如：2021-02-04 12:00:00.110 如果不传，开始时间默认赋值：当前日期时间往前推3天</param>
+            <param name="endTime">结束时间 默认为空,传输请精确到毫秒，例如：2021-02-04 12:00:00.110 如果不传，结束时间默认赋值：当前日期时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.MaoZhuaGu.OrderCheck.PostTicketVerification(System.String)">
+            <summary>
+            描述：
+            闸机核销
+            </summary>
+            <param name="mdi">门票码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.MeiTuan.Common.GetParameters(System.String,System.String)">
+            <summary>
+            获取接口调用参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.MeiTuan.Common.GetAlyParameters(System.String)">
+            <summary>
+            获取阿里云参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.MeiTuan.Common.InsertAlyParameters(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            添加阿里云参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.MeiTuan.Common.UpdateAlyParameters(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            更新阿里云参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.MeiTuan.Common.UpdateParameters(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            更新
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.MeiTuan.Common.GetForString(System.String,System.String)">
+            <summary>
+            Get接口调用
+            </summary>
+            <param name="para">参数</param>
+            <param name="url">接口路径</param>
+            <returns>Json格式</returns>
+        </member>
+        <member name="M:Ticket.MeiTuan.Common.PostHttpResponse(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Text.Encoding)">
+            <summary>
+            POS请求
+            </summary>
+            <param name="url"></param>
+            <param name="parameters"></param>
+            <param name="charset"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.MeiTuan.Common.WriteFile(System.String,System.String)">
+            <summary>
+            保存接口返回结果到文件中
+            </summary>
+            <param name="title">日志标题</param>
+            <param name="datastr">日志内容</param>
+        </member>
+        <member name="M:Ticket.MeiTuan.Common.GenerateSign(System.Collections.Generic.Dictionary{System.String,System.Object},System.String,System.String)">
+            <summary>
+            生成签名
+            </summary>
+            <param name="param"></param>
+            <param name="secret"></param>
+            <param name="signmethod"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.MeiTuan.Common.ErrorMessage(System.String)">
+            <summary>
+            错误信息
+            </summary>
+            <param name="erroecode">错误码</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ticket.MeiTuan.TicketCheck">
+            <summary>
+            美团验票
+            </summary>
+        </member>
+        <member name="M:Ticket.MeiTuan.TicketCheck.#ctor(System.String,System.String,System.String)">
+            <summary>
+            构造方法初始化参数
+            </summary>
+        </member>
+        <member name="M:Ticket.MeiTuan.TicketCheck.Query">
+            <summary>
+            session范围查询接口
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.MeiTuan.TicketCheck.Scope(System.String)">
+            <summary>
+            session适用店铺查询接口
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.MeiTuan.TicketCheck.Prepare(System.String)">
+            <summary>
+            输码验券校验
+            </summary>
+            <param name="receipt_code">团购券码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.MeiTuan.TicketCheck.Consume(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            验券
+            </summary>
+            <param name="requestid">请求id，用于标识幂等性</param>
+            <param name="receipt_code">团购券码，必须未验证</param>
+            <param name="count">验券数量, 不可多于100个</param>
+            <param name="app_shop_account">商家在第三方系统登录的帐号，仅用于记录验券者的信息，不用于权限验证</param>
+            <param name="app_shop_accountname">商家在第三方系统登录的用户名，仅用于记录验券者的信息，不用于权限验证</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.MeiTuan.TicketCheck.GetConsumed(System.String)">
+            <summary>
+            查询已验券信息接口
+            </summary>
+            <param name="receipt_code">团购券码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.MeiTuan.TicketCheck.QueryListByDate(System.String,System.Int32,System.Int32)">
+            <summary>
+            查询某天验券记录
+            </summary>
+            <param name="date">日期</param>
+            <param name="offset">查询起始位置</param>
+            <param name="limit">查询条数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.MeiTuan.TicketCheck.ReverseConsume(System.String,System.String,System.String,System.String)">
+            <summary>
+            撤销验券接口
+            </summary>
+            <param name="app_deal_id">套餐id</param>
+            <param name="receipt_code">团购券码</param>
+            <param name="app_shop_account">商家在第三方系统登录的帐号</param>
+            <param name="app_shop_accountname">商家在第三方系统登录的用户名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.MeiTuan.TicketCheck.ScanPrepare(System.String)">
+            <summary>
+            扫码验券校验接口
+            </summary>
+            <param name="qr_code">团购券二维码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.MeiTuan.TicketCheck.QueryShopDeal(System.Int32,System.Int32)">
+            <summary>
+            获取团购信息接口
+            </summary>
+            <param name="offset">查询起始位置</param>
+            <param name="limit">查询条数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.MeiTuan.TicketCheck.Auth(System.String)">
+            <summary>
+            授权
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.MeiTuan.TicketCheck.GetSession(System.String)">
+            <summary>
+            session换取接口
+            </summary>
+        </member>
+        <member name="M:Ticket.MeiTuan.TicketCheck.RefreshToken">
+            <summary>
+            session刷新接口
+            </summary>
+        </member>
+        <member name="T:Ticket.OTAPlatForm.Common">
+            <summary>
+            公共方法
+            </summary>
+        </member>
+        <member name="M:Ticket.OTAPlatForm.Common.MakeSign(System.String,System.String)">
+            <summary>
+            签名
+            </summary>
+            <param name="para"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.OTAPlatForm.Common.PostForEntiy``1(``0,System.String)">
+            <summary>
+            POST接口调用
+            </summary>
+            <param name="entity">参数值</param>
+            <param name="url">接口路径</param>
+            <returns>Json格式</returns>
+        </member>
+        <member name="M:Ticket.OTAPlatForm.Common.GetForString(System.String,System.String)">
+            <summary>
+            Get接口调用
+            </summary>
+            <param name="para">参数</param>
+            <param name="url">接口路径</param>
+            <returns>Json格式</returns>
+        </member>
+        <member name="M:Ticket.OTAPlatForm.Common.GetParameters(System.String,System.String)">
+            <summary>
+            获取接口调用参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.OTAPlatForm.Common.AddParameters(System.String,System.String)">
+            <summary>
+            添加是否加密的标志
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.OTAPlatForm.Common.WriteFile(System.String,System.String)">
+            <summary>
+            保存接口返回结果到文件中
+            </summary>
+            <param name="title">日志标题</param>
+            <param name="datastr">日志内容</param>
+        </member>
+        <member name="F:Ticket.OTAPlatForm.Common.Key">
+            <summary>
+            密钥
+            </summary>
+        </member>
+        <member name="M:Ticket.OTAPlatForm.Common.AESEncrypt(System.String,System.String[])">
+            <summary>
+            AES加密
+            </summary>
+            <param name="value">需要加密的字符串。</param>
+            <param name="key">密钥。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.OTAPlatForm.Common.AESDecrypt(System.String,System.String[])">
+            <summary>
+            AES解密
+            </summary>
+            <param name="value">需要解密的字符串。</param>
+            <param name="key">密钥。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.OTAPlatForm.Common.MD5Encrypt(System.String)">
+            <summary>
+            MD5加密字符串。
+            </summary>
+            <param name="value">需要加密的字符串。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.OTAPlatForm.HttpCommon.generateAuthAndDateHeader(System.String,System.Net.HttpWebRequest,System.String,System.String,System.String)">
+            <summary>
+            生成报文头
+            </summary>
+            <param name="url">请求地址</param>
+            <param name="request"></param>
+            <param name="clientId"></param>
+            <param name="clientSecret"></param>
+            <param name="partnerId">合作方ID</param>
+        </member>
+        <member name="M:Ticket.OTAPlatForm.HttpCommon.CallPrivateMethod(System.Object,System.String,System.Object[])">
+            <summary>
+            http头中的Date不能修改，所以调用反射修改
+            </summary>
+            <param name="instance">要修改的对象</param>
+            <param name="name">调用方法名</param>
+            <param name="param"></param>
+        </member>
+        <member name="M:Ticket.OTAPlatForm.HttpCommon.ToBase64hmac(System.String,System.String)">
+            <summary>
+            HMACSHA1算法加密并返回ToBase64String
+            </summary>
+            <param name="strText">签名参数字符串</param>
+            <param name="strKey">密钥参数</param>
+            <returns>返回一个签名值(即哈希值)</returns>
+        </member>
+        <member name="M:Ticket.OTAPlatForm.HttpCommon.Post(System.Net.HttpWebRequest,System.String)">
+            <summary>
+            POST整个字符串到URL地址中
+            </summary>
+            <param name="Url"></param>
+            <param name="jsonParas"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.OTAPlatForm.HttpCommon.GuidTo16String">
+            <summary>
+            根据GUID生成16位GUID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.OTAPlatForm.Order.#ctor(System.String,System.String)">
+            <summary>
+            构造方法初始化参数
+            </summary>
+        </member>
+        <member name="M:Ticket.OTAPlatForm.Order.Do(System.String,System.String,System.String,System.String)">
+            <summary>
+            调用OTA平台提交
+            </summary>
+            <param name="jsonData"></param>
+            <param name="functionName">方法名（查询/核销）</param>
+            <param name="printtype">2 整单核销，其他为单张核销</param>
+            <param name="checknum">printtype 不为2，checknum不为1是部分核销</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.PFTTicket.Common.GetParameters(System.String,System.String,System.String)">
+            <summary>
+            获取接口调用参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.PFTTicket.Common.GetForString(System.String,System.String)">
+            <summary>
+            Get接口调用
+            </summary>
+            <param name="para">参数</param>
+            <param name="url">接口路径</param>
+            <returns>Json格式</returns>
+        </member>
+        <member name="M:Ticket.PFTTicket.Common.WriteFile(System.String,System.String)">
+            <summary>
+            保存接口返回结果到文件中
+            </summary>
+            <param name="title">日志标题</param>
+            <param name="datastr">日志内容</param>
+        </member>
+        <member name="M:Ticket.PFTTicket.Common.WriteFileError(System.String,System.String)">
+            <summary>
+            保存接口返回结果到文件中
+            </summary>
+            <param name="title">日志标题</param>
+            <param name="datastr">日志内容</param>
+        </member>
+        <member name="M:Ticket.PFTTicket.Common.GenerateSign(System.Collections.Generic.Dictionary{System.String,System.Object},System.String,System.String)">
+            <summary>
+            生成签名
+            </summary>
+            <param name="param"></param>
+            <param name="secret"></param>
+            <param name="signmethod"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.PFTTicket.Common.ErrorMessage(System.String)">
+            <summary>
+            错误信息
+            </summary>
+            <param name="erroecode">错误码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.PFTTicket.TicketCheck.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            构造方法初始化参数
+            </summary>
+        </member>
+        <member name="M:Ticket.PFTTicket.TicketCheck.Query(System.String,System.String)">
+            <summary>
+            查询
+            </summary>
+            <param name="query_type">验证类型 1=凭证码 2=手机号 3=身份证 4=订单分批验证</param>
+            <param name="code">券码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.PFTTicket.TicketCheck.Check(System.String,System.String,System.String)">
+            <summary>
+            票付通验票接口。
+            </summary>
+            <param name="code">凭证码。</param>
+            <returns></returns>
+        </member>
+        <member name="P:Ticket.PWBTicket.Parameters.zhiyoubao_ApiUrl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.Utils.PostUrl">
+            <summary>
+            获取TOKEN
+            </summary>
+        </member>
+        <member name="M:Ticket.PWBTicket.Utils.WriteFile(System.String,System.String)">
+            <summary>
+            保存接口返回结果到文件中
+            </summary>
+            <param name="title">日志标题</param>
+            <param name="datastr">日志内容</param>
+        </member>
+        <member name="M:Ticket.PWBTicket.Utils.LogError(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="ex">异常</param>
+            <param name="des"></param>
+        </member>
+        <member name="M:Ticket.PWBTicket.Utils.LogError(System.String,System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="ex">异常</param>
+            <param name="des"></param>
+        </member>
+        <member name="M:Ticket.PWBTicket.Utils.MD5(System.String)">
+            <summary>
+            MD5加密字符串。
+            </summary>
+            <param name="value">需要加密的字符串。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.PWBTicket.wxParameterService.GetParameters(System.String,System.String)">
+            <summary>
+            获取接口调用参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Ticket.PWBTicket.PostParam">
+            <summary>
+            智游宝-基础请求参数
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.PostParam.xmlMsg">
+            <summary>
+            接口内容
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.PostParam.sign">
+            <summary>
+            签名
+            </summary>
+        </member>
+        <member name="T:Ticket.PWBTicket.ReqCheckParam">
+            <summary>
+            检票参数
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.ReqCheckParam.certificateNo">
+            <summary>
+            辅助检票号
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.ReqCheckParam.orderDetailId">
+            <summary>
+            订单明细ID
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.ReqCheckParam.checkNum">
+            <summary>
+            检票数量
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.ReqCheckParam.checkSrc">
+            <summary>
+            检票来源
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.ReqHeader.application">
+            <summary>
+            方法名
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.ReqHeader.requestTime">
+            <summary>
+            请求时间
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.ReqIdentityInfo.corpCode">
+            <summary>
+            企业码
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.ReqIdentityInfo.userName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.ReqQueryParam.checkNo">
+            <summary>
+            检票码
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.ReqQueryParam.zybOrderCode">
+            <summary>
+            智游宝订单号
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.ReqQueryParam.assistCheckNo">
+            <summary>
+            辅助码
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.ReqQueryParam.tel">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.ReqQueryParam.thirdCode">
+            <summary>
+            第三方订单号
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.ReqQueryParam.certificateNo">
+            <summary>
+            证件号
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.SubOrderContent.id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.SubOrderContent.scenicGoodsName">
+            <summary>
+            wyy门票1
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.SubOrderContent.saleCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.SubOrderContent.saleCorpCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.SubOrderContent.corpCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.SubOrderContent.corpName">
+            <summary>
+            张家口富龙文化旅游有限公司-分销2
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.SubOrderContent.orderType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.SubOrderContent.startDate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.SubOrderContent.endDate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.SubOrderContent.goodsName">
+            <summary>
+            wyy门票1
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.SubOrderContent.isVm">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.SubOrderContent.occDate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.SubOrderContent.quantity">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.SubOrderContent.price">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.SubOrderContent.totalPrice">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.SubOrderContent.closePrice">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.SubOrderContent.closeTotalPrice">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.SubOrderContent.goodsCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.SubOrderContent.payMethod">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.SubOrderContent.weekDay">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.SubOrderContent.createBy">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.SubOrderContent.createTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.SubOrderContent.modifyBy">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.SubOrderContent.modifyTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.SubOrderContent.alreadyCheckNum">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.SubOrderContent.needCheckNum">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.SubOrderContent.checkStatus">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.SubOrderContent.checkNum">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.SubOrderContent.onlineCheckNum">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.SubOrderContent.checkTimeForbid">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.SubOrderContent.returnNum">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.SubOrderContent.retrunFee">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.SubOrderContent.returnFeeCategory">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.SubOrderContent.returnFeeRate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.SubOrderContent.isRetreat">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.SubOrderContent.isExpiredRetreat">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.SubOrderContent.isRetreatAudit">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.OrderContent.id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.OrderContent.orderCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.OrderContent.linkName">
+            <summary>
+            测试
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.OrderContent.payMethod">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.OrderContent.tel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.OrderContent.payStatus">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.OrderContent.createBy">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.OrderContent.modifyBy">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.OrderContent.modifyTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.OrderContent.needCheckNum">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.OrderContent.alreadyCheckNum">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.OrderContent.checkStatus">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.OrderContent.thirdCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.OrderContent.corpCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.OrderContent.corpName">
+            <summary>
+            张家口富龙文化旅游有限公司-分销2
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.OrderContent.subOrderContents">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.PWBResponse.transactionName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.PWBResponse.code">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.PWBResponse.description">
+            <summary>
+            成功
+            </summary>
+        </member>
+        <member name="P:Ticket.PWBTicket.PWBResponse.orderContents">
+            <summary>
+            
+            </summary>
+        </member>
+        <!-- 对于成员“T:Ticket.PWBTicket.PwbSDK”忽略有格式错误的 XML 注释 -->
+        <member name="M:Ticket.PWBTicket.PwbSDK.GetProductInfo(System.String)">
+            <summary>
+            查询票信息
+            </summary>
+            <param name="ticketCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.PWBTicket.PwbSDK.ConsumeTicket(System.String,System.Int32,System.String)">
+            <summary>
+            核销票接口
+            </summary>
+            <param name="ticketCode"></param>
+            <param name="qty"></param>
+            <param name="checkSrc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.TicketApiService.MeiTuanQueryTicketInfo(System.String,System.String,System.String@)">
+            <summary>
+            输码验券校验
+            </summary>
+            <param name="receipt_code">团购券码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.TicketApiService.MeiTuanProductList(System.String,System.String@)">
+            <summary>
+            获取团购商品信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.TicketApiService.MeiTuanTicketConsume(System.String,System.String,System.String,System.String,System.String,System.String,System.String@)">
+            <summary>
+            验券
+            </summary>
+            <param name="requestid">请求id，用于标识幂等性</param>
+            <param name="receipt_code">团购券码，必须未验证</param>
+            <param name="count">验券数量, 不可多于100个</param>
+            <param name="app_shop_account">商家在第三方系统登录的帐号，仅用于记录验券者的信息，不用于权限验证</param>
+            <param name="app_shop_accountname">商家在第三方系统登录的用户名，仅用于记录验券者的信息，不用于权限验证</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.TicketApiService.MeiTuanQueryResult(System.String,System.String,System.String@)">
+            <summary>
+            处理美团返回结果
+            </summary>
+            <param name="res"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.TicketApiService.KouBeiProductList(System.String)">
+            <summary>
+            核销查询接口
+            </summary>
+            <param name="ticket_code">凭证码</param>
+            <param name="s_group"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.TicketApiService.KouBeiQueryTicketInfo(System.String,System.String,System.String@)">
+            <summary>
+            核销查询接口
+            </summary>
+            <param name="ticket_code">凭证码</param>
+            <param name="s_group"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.TicketApiService.KouBeiTicketConsume(System.String,System.String,System.String,System.String,System.String,System.String,System.String@)">
+            <summary>
+            口碑票核销
+            </summary>
+            <param name="ticket_code">凭证码，包括内部凭证码和外部凭证码，内部凭证码为12位，纯数字，且唯一不重复</param>
+            <param name="quantity">核销份数，次卡业务必填、非次卡业务选填， 非次卡场景表示核销同一订单下的同类凭证的个数</param>
+            <param name="shop_type">门店id类型,INTERNAL_SHOP(内部店铺id),EXTERNAL_SHOP(外部店铺id),默认INTERNAL_SHOP</param>
+            <param name="order_no">口碑订单号，使用外部凭证码核销时必填</param>
+            <param name="code_type">凭证码类型,INTERNAL_CODE(内部凭证码),EXTERNAL_CODE(外部凭证码),默认INTERNAL_CODE,外部券场景必填</param>
+            <param name="s_group"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.TicketApiService.ShanglvTicketInfo(System.String,System.String,System.String@)">
+            <summary>
+            尚旅-查询接口
+            </summary>
+            <param name="code">券码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.TicketApiService.ShanglvTicketConsume(System.String,System.Int32,System.String,System.String@)">
+            <summary>
+            尚旅-验票接口
+            </summary>
+            <param name="code">券码</param>
+            <param name="num">验票张数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.TicketApiService.PFTQueryTicketInfo(System.String,System.String,System.String,System.String,System.String@)">
+            <summary>
+            查询券信息接口
+            </summary>
+            <param name="querytype">验证类型 1=凭证码 2=手机号 3=身份证 4=订单分批验证</param>
+            <param name="code">券码</param>
+            <param name="s_group">参数组编号</param>
+            <param name="or_group">营业点</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.TicketApiService.PFTQueryResult(System.String,System.String,System.String@)">
+            <summary>
+            处理票付通返回结果
+            </summary>
+            <param name="res"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.TicketApiService.PFTTicketConsume(System.String,System.String,System.String,System.String,System.String,System.String@)">
+            <summary>
+            核销券
+            </summary>
+            <param name="querytype">验证类型 1=凭证码 2=手机号 3=身份证 4=订单分批验证</param>
+            <param name="code">券码</param>
+            <param name="order_batch">分批验证数据 check_type=4时必须 格式：订单号1,验证票数#订单号2,验证票数2</param>
+            <param name="s_group">参数组编号</param>
+            <param name="or_group">营业点</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.TicketApiService.OTAQueryTicketInfo(System.String,System.String,System.String,System.String,System.String@)">
+            <summary>
+            套票查询
+            </summary>
+            <param name="queryType"></param>
+            <param name="ticketCode"></param>
+            <param name="sGroup"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.TicketApiService.OTATicketConsume(System.String,System.String,System.String,System.String,System.String,System.String,System.String@)">
+            <summary>
+            套票核销
+            </summary>
+            <param name="checkType"></param>
+            <param name="ticketCode"></param>
+            <param name="printtype">2整单核销，其他值为单张核销</param>
+            <param name="sGroup"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.TicketApiService.OTATicketReverse(System.String,System.String,System.String,System.String,System.String@)">
+            <summary>
+            套票撤销
+            </summary>
+            <param name="ticketCode"></param>
+            <param name="printtype">2整单核销，其他值为单张核销</param>
+            <param name="sGroup"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.TicketApiService.ZiWoYouQueryTicketInfo(System.String,System.String,System.String,System.String,System.String@)">
+            <summary>
+            自我游供应商接口,订单查询接口
+            </summary>
+            <param name="ticketType">验证类型</param>
+            <param name="ticketCode">验证码</param>
+            <param name="isCheckBind">绑定产品检查</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.TicketApiService.ZiWoYouTicketConsume(System.String,System.String,System.String,System.String@)">
+            <summary>
+            验证订单
+            </summary>
+            <param name="orderId">订单号</param>
+            <param name="number">验证数量</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.TicketApiService.ShuZanQueryTicketInfo(System.String,System.String,System.String@)">
+            <summary>
+            数赞查询接口
+            </summary>
+            <param name="code">券码</param>
+            <param name="s_group">参数组编号</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.TicketApiService.ShuZanTicketConsume(System.String,System.String,System.String,System.String,System.String@)">
+            <summary>
+            数赞核销接口
+            </summary>
+            <param name="code">券码</param>
+            <param name="mobile">收银员手机号</param>
+            <param name="s_group">参数组编号</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.TicketApiService.ShuZanProductList(System.String,System.String@)">
+            <summary>
+            获取商品列表
+            </summary>
+            <param name="s_group"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.TicketApiService.ShuZanQueryResult(System.String,System.String,System.String@)">
+            <summary>
+            处理数赞返回结果
+            </summary>
+            <param name="res"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.TicketApiService.DouYinQueryTicketInfo(System.String,System.String,System.String@)">
+            <summary>
+            输码验券校验
+            </summary>
+            <param name="receipt_code">团购券码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.TicketApiService.DouYinTicketConsume(System.String,System.String,System.String,System.String@)">
+            <summary>
+            验券
+            </summary>
+            <param name="receipt_code">团购券码，必须未验证</param>
+            <param name="count">验券数量, 不可多于100个</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.TicketApiService.DouYinQueryResult(System.String,System.String@)">
+            <summary>
+            处理抖音查询返回结果
+            </summary>
+            <param name="res"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.TicketApiService.DouYinConsumeResult(System.String,System.String,System.String@)">
+            <summary>
+            处理抖音核销返回结果
+            </summary>
+            <param name="res"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.TicketApiService.DouYinQueryTicketInfoXSHG(System.String,System.String,System.String@)">
+            <summary>
+            第三方抖音输码验券校验
+            </summary>
+            <param name="receipt_code">团购券码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.TicketApiService.DouYinTicketConsumeXSHG(System.String,System.String,System.String,System.String@)">
+            <summary>
+            第三方抖音验券
+            </summary>
+            <param name="receipt_code">团购券码，必须未验证</param>
+            <param name="count">验券数量, 不可多于100个</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.TicketApiService.DouYinQueryResultXSHG(System.String,System.String@)">
+            <summary>
+            处理抖音第三方查询返回结果
+            </summary>
+            <param name="res"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.TicketApiService.DouYinConsumeResultXSHG(System.String,System.String,System.String@)">
+            <summary>
+            处理抖音第三方核销返回结果
+            </summary>
+            <param name="res"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.TicketApiService.VIPConsumeXSHG(System.String,System.String,System.String,System.String@)">
+            <summary>
+            香水皇宫会员卡付款
+            </summary>
+            <param name="receipt_code">会员卡二维码</param>
+            <param name="count">付款金额 分，需要转 元</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.TicketApiService.VIPConsumeResultXSHG(System.String,System.String,System.String@)">
+            <summary>
+            处理抖音第三方核销返回结果
+            </summary>
+            <param name="res"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.TicketApiService.ZYBQueryTicketInfo(System.String,System.String,System.String@)">
+            <summary>
+            智游宝查询接口
+            </summary>
+            <param name="code">券码</param>
+            <param name="s_group">参数组编号</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.TicketApiService.ZYBTicketConsume(System.String,System.Int32,System.String,System.String,System.String@)">
+            <summary>
+            智游宝核销接口
+            </summary>
+            <param name="code">券码</param>
+            <param name="mobile">收银员手机号</param>
+            <param name="s_group">参数组编号</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.TicketApiService.ZKTQueryTicketInfo(System.String,System.String,System.String@)">
+            <summary>
+            直客通查询接口
+            </summary>
+            <param name="code">券码</param>
+            <param name="s_group">参数组编号</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.TicketApiService.ZKTQueryResult(System.String,System.String@)">
+            <summary>
+            直客通返回结果
+            </summary>
+            <param name="res"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.TicketApiService.ZKTTicketConsume(System.String,System.String,System.String@)">
+            <summary>
+            直客通核销接口
+            </summary>
+            <param name="code">券码</param>
+            <param name="mobile">收银员手机号</param>
+            <param name="s_group">参数组编号</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.TicketApiService.ZKTConsumeResult(System.String,System.String@)">
+            <summary>
+            直客通返回结果
+            </summary>
+            <param name="res"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.TicketApiService.MZGQueryTicketInfo(System.String,System.String,System.String@)">
+            <summary>
+            描述：
+            查询订单信息
+            </summary>
+            <param name="ticket_code">订单号 osn码 类似：tps20210204173347594926</param>
+            <param name="s_group">参数组编号</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.TicketApiService.MZGProductList(System.String,System.String@)">
+            <summary>
+            描述
+            获取门票商品列表
+            </summary>
+            <param name="s_group">参数组编号</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.TicketApiService.MZGTicketConsume(System.String,System.String,System.String@)">
+            <summary>
+            描述：
+            闸机核销
+            </summary>
+            <param name="out_trade_no">门票码 类似：mzg_tps20210204173347594926_63a15aaceaebf5ab92f2348260725934</param>
+            <param name="s_group">参数组编号</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.TicketApiService.WeiMengQueryTicketInfo(System.String,System.String,System.String@)">
+            <summary>
+            优惠券码获取优惠券信息
+            </summary>
+            <param name="receipt_code">团购券码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.TicketApiService.WeiMengProductList(System.String,System.String@)">
+            <summary>
+            优惠券列表
+            </summary>
+            <param name="s_group"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.TicketApiService.WeiMengTicketConsume(System.String,System.String,System.String,System.String@)">
+            <summary>
+            核销优惠券 线上 线下
+            </summary>
+            <param name="receipt_code">团购券码，必须未验证</param>
+            <param name="verifyType">1: 线上核销; 2: 线下核销</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.TicketApiService.WeiMengQueryResult(System.String,System.String@)">
+            <summary>
+            处理微盟返回结果
+            </summary>
+            <param name="res"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.TicketApiService.CityQueryTicketInfo(System.String,System.String,System.String,System.String,System.String@)">
+            <summary>
+            清远旅游年卡查询接口
+            </summary>
+            <param name="card_no">市民卡号(扫二维码直接返回或读卡得到)</param>
+            <param name="pos_no">闸机终端号（每台终端唯一标识）</param>
+            <param name="is_qrcode">是否是扫码方式(1-是扫码，0-是读卡)</param>
+            <param name="s_group">参数组编号</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.TicketApiService.CityTicketConsume(System.String,System.String,System.String,System.String,System.String@)">
+            <summary>
+            清远旅游年卡验票接口
+            </summary>
+            <param name="card_no">市民卡号码(扫二维码直接返回或读卡得到)</param>
+            <param name="pos_no">闸机终端号(每台终端唯一标识)</param>
+            <param name="is_qrcode">是否是扫码方式(1-是扫码，0-是读卡)</param>
+            <param name="s_group">参数组编号</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.TicketApiService.CityTicketQueryResult(System.String,System.String@)">
+            <summary>
+            处理美团,票付通返回结果
+            </summary>
+            <param name="res"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Ticket.VIPConsume.VIPConsumeXSHG">
+            <summary>
+            会员卡核销
+            </summary>
+        </member>
+        <member name="M:Ticket.VIPConsume.VIPConsumeXSHG.#ctor(System.String,System.String,System.String)">
+            <summary>
+            构造方法初始化参数
+            </summary>
+        </member>
+        <member name="M:Ticket.VIPConsume.VIPConsumeXSHG.ConsumeXSHG(System.String,System.String)">
+            <summary>
+            香水皇宫会员卡核销
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.WeiMeng.Common.GetParameters(System.String,System.String,System.String)">
+            <summary>
+            获取接口调用参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.WeiMeng.Common.GetForString(System.String,System.String)">
+            <summary>
+            Get接口调用
+            </summary>
+            <param name="para">参数</param>
+            <param name="url">接口路径</param>
+            <returns>Json格式</returns>
+        </member>
+        <member name="M:Ticket.WeiMeng.Common.WriteFile(System.String,System.String)">
+            <summary>
+            保存接口返回结果到文件中
+            </summary>
+            <param name="title">日志标题</param>
+            <param name="datastr">日志内容</param>
+        </member>
+        <member name="M:Ticket.WeiMeng.Common.WriteFileError(System.String,System.String)">
+            <summary>
+            保存接口返回结果到文件中
+            </summary>
+            <param name="title">日志标题</param>
+            <param name="datastr">日志内容</param>
+        </member>
+        <member name="M:Ticket.WeiMeng.Common.GenerateSign(System.Collections.Generic.Dictionary{System.String,System.Object},System.String,System.String)">
+            <summary>
+            生成签名
+            </summary>
+            <param name="param"></param>
+            <param name="secret"></param>
+            <param name="signmethod"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.WeiMeng.Common.ErrorMessage(System.String)">
+            <summary>
+            错误信息
+            </summary>
+            <param name="erroecode">错误码</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ticket.WeiMeng.TicketCheck">
+            <summary>
+            微盟
+            </summary>
+        </member>
+        <member name="M:Ticket.WeiMeng.TicketCheck.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            构造方法初始化参数
+            </summary>
+        </member>
+        <member name="M:Ticket.WeiMeng.TicketCheck.getCouponList">
+            <summary>
+            获取优惠券列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.WeiMeng.TicketCheck.Query(System.String)">
+            <summary>
+            查询
+            </summary>
+            <param name="code">券码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.WeiMeng.TicketCheck.Check(System.String,System.String)">
+            <summary>
+            票付通验票接口。check_type  1: 线上核销; 2: 线下核销
+            </summary>
+            <param name="code">凭证码。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.XmlHelper.SerializeToXml``1(``0)">
+            <summary>
+            将自定义对象序列化为XML字符串
+            </summary>
+            <param name="myObject">自定义对象实体</param>
+            <returns>序列化后的XML字符串</returns>
+        </member>
+        <member name="M:Ticket.XmlHelper.DeserializeToObject``1(System.String)">
+            <summary>
+            将XML字符串反序列化为对象
+            </summary>
+            <typeparam name="T">对象类型</typeparam>
+            <param name="xml">XML字符</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.XmlHelper.Xml2Json(System.String)">
+            <summary>
+            将xml转为JSON
+            </summary>
+            <param name="xmlStr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.QYCityCard.CityCard.#ctor(System.String,System.String,System.String)">
+            <summary>
+            构造方法初始化参数
+            </summary>
+        </member>
+        <member name="M:Ticket.QYCityCard.CityCard.GetTicket(System.String,System.String,System.String)">
+            <summary>
+            清远旅游年卡查询接口
+            </summary>
+            <param name="card_no">市民卡号(扫二维码直接返回或读卡得到)</param>
+            <param name="pos_no">闸机终端号（每台终端唯一标识）</param>
+            <param name="is_qrcode">是否是扫码方式(1-是扫码，0-是读卡)</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.QYCityCard.CityCard.CheckTicket(System.String,System.String,System.String)">
+            <summary>
+            清远旅游年卡验票接口
+            </summary>
+            <param name="card_no">市民卡号码(扫二维码直接返回或读卡得到)</param>
+            <param name="pos_no">闸机终端号(每台终端唯一标识)</param>
+            <param name="is_qrcode">是否是扫码方式(1-是扫码，0-是读卡)</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.QYCityCard.CityCard.SaveImageFromWeb(System.String,System.String,System.String)">
+            <summary>
+            保存web图片到本地
+            </summary>
+            <param name="imgUrl">web图片路径</param>
+            <param name="path">保存路径</param>
+            <param name="fileName">保存文件名</param>
+            <returns></returns>
+        </member>
+        <member name="P:Ticket.QYCityCard.GetTicketPara.card_no">
+            <summary>
+            市民卡号,市民卡号码(扫二维码直接返回或读卡得到)
+            </summary>
+        </member>
+        <member name="P:Ticket.QYCityCard.GetTicketPara.pos_no">
+            <summary>
+            闸机终端号,每台终端唯一标识
+            </summary>
+        </member>
+        <member name="P:Ticket.QYCityCard.GetTicketPara.is_qrcode">
+            <summary>
+            是否是扫码方式,1-是扫码，0-是读卡
+            </summary>
+        </member>
+        <member name="P:Ticket.QYCityCard.GetTicketPara.signString">
+            <summary>
+            签名信息,MD5加密参数信息(需分配用户与密码)
+            </summary>
+        </member>
+        <member name="P:Ticket.QYCityCard.CheckTicketPara.card_no">
+            <summary>
+            市民卡号,市民卡号码(扫二维码直接返回或读卡得到)
+            </summary>
+        </member>
+        <member name="P:Ticket.QYCityCard.CheckTicketPara.pos_no">
+            <summary>
+            闸机终端号,每台终端唯一标识
+            </summary>
+        </member>
+        <member name="P:Ticket.QYCityCard.CheckTicketPara.is_qrcode">
+            <summary>
+            是否是扫码方式,1-是扫码，0-是读卡
+            </summary>
+        </member>
+        <member name="P:Ticket.QYCityCard.CheckTicketPara.checktime">
+            <summary>
+            验票时间,格式YYYYMMDDHHMMSS(例：20191120102555)
+            </summary>
+        </member>
+        <member name="P:Ticket.QYCityCard.CheckTicketPara.signString">
+            <summary>
+            签名信息,MD5加密参数信息(需分配用户与密码)
+            </summary>
+        </member>
+        <member name="P:Ticket.QYCityCard.TickeInfo.endtime">
+            <summary>
+            有效期
+            </summary>
+        </member>
+        <member name="P:Ticket.QYCityCard.TickeInfo.bal">
+            <summary>
+            剩余数量
+            </summary>
+        </member>
+        <member name="P:Ticket.QYCityCard.TickeInfo.name">
+            <summary>
+            公司名称
+            </summary>
+        </member>
+        <member name="P:Ticket.QYCityCard.CardInfo.id">
+            <summary>
+            ID
+            </summary>
+        </member>
+        <member name="P:Ticket.QYCityCard.CardInfo.cardNo">
+            <summary>
+            卡号
+            </summary>
+        </member>
+        <member name="P:Ticket.QYCityCard.CardInfo.cardType">
+            <summary>
+            卡类型
+            </summary>
+        </member>
+        <member name="P:Ticket.QYCityCard.CardInfo.idCardName">
+            <summary>
+            人名
+            </summary>
+        </member>
+        <member name="P:Ticket.QYCityCard.CardInfo.idCardNo">
+            <summary>
+            身份证号
+            </summary>
+        </member>
+        <member name="P:Ticket.QYCityCard.CardInfo.image">
+            <summary>
+            头像路径
+            </summary>
+        </member>
+        <member name="P:Ticket.QYCityCard.CardInfo.mobile">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="M:Ticket.QYCityCard.Common.GetParameters(System.String,System.String)">
+            <summary>
+            获取接口调用参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.QYCityCard.Common.MakeSignLower(System.String)">
+            <summary>
+            签名
+            </summary>
+            <param name="para"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.QYCityCard.Common.PostForEntiy``1(``0,System.String)">
+            <summary>
+            POS请求
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="TEntity"></param>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.QYCityCard.Common.PostHttpResponse(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Text.Encoding)">
+            <summary>
+            POS请求
+            </summary>
+            <param name="url"></param>
+            <param name="parameters"></param>
+            <param name="charset"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.QYCityCard.Common.WriteFile(System.String,System.String)">
+            <summary>
+            保存接口返回结果到文件中
+            </summary>
+            <param name="title">日志标题</param>
+            <param name="datastr">日志内容</param>
+        </member>
+        <member name="M:Ticket.QYCityCard.Common.GenerateSign(System.Collections.Generic.Dictionary{System.String,System.Object},System.String,System.String)">
+            <summary>
+            生成签名
+            </summary>
+            <param name="param"></param>
+            <param name="secret"></param>
+            <param name="signmethod"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.QYCityCard.Common.ErrorMessage(System.String)">
+            <summary>
+            错误信息
+            </summary>
+            <param name="erroecode">错误码</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ticket.ShanglvTicket.Common">
+            <summary>
+            公共方法
+            </summary>
+        </member>
+        <member name="M:Ticket.ShanglvTicket.Common.MakeSign(System.String)">
+            <summary>
+            签名
+            </summary>
+            <param name="para"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.ShanglvTicket.Common.PostForEntiy(System.Collections.Generic.SortedDictionary{System.String,System.Object},System.String)">
+            <summary>
+            POST接口调用
+            </summary>
+            <param name="entity">参数值</param>
+            <param name="url">接口路径</param>
+            <returns>Json格式</returns>
+        </member>
+        <member name="M:Ticket.ShanglvTicket.Common.GetForString(System.String,System.String)">
+            <summary>
+            Get接口调用
+            </summary>
+            <param name="para">参数</param>
+            <param name="url">接口路径</param>
+            <returns>Json格式</returns>
+        </member>
+        <member name="M:Ticket.ShanglvTicket.Common.GetParameters(System.String,System.String)">
+            <summary>
+            获取接口调用参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.ShanglvTicket.Common.WriteFile(System.String,System.String)">
+            <summary>
+            保存接口返回结果到文件中
+            </summary>
+            <param name="title">日志标题</param>
+            <param name="datastr">日志内容</param>
+        </member>
+        <member name="F:Ticket.ShanglvTicket.Common.Key">
+            <summary>
+            密钥
+            </summary>
+        </member>
+        <member name="M:Ticket.ShanglvTicket.Common.AESEncrypt(System.String,System.String[])">
+            <summary>
+            AES加密
+            </summary>
+            <param name="value">需要加密的字符串。</param>
+            <param name="key">密钥。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.ShanglvTicket.Common.AESDecrypt(System.String,System.String[])">
+            <summary>
+            AES解密
+            </summary>
+            <param name="value">需要解密的字符串。</param>
+            <param name="key">密钥。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.ShanglvTicket.Common.MD5Encrypt(System.String)">
+            <summary>
+            MD5加密字符串。
+            </summary>
+            <param name="value">需要加密的字符串。</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ticket.ShanglvTicket.WmhPos">
+            <summary>
+            尚旅票务
+            </summary>
+        </member>
+        <member name="M:Ticket.ShanglvTicket.WmhPos.#ctor(System.String,System.String,System.String)">
+            <summary>
+            构造方法初始化参数
+            </summary>
+        </member>
+        <member name="P:Ticket.ShanglvTicket.ValidateEntity.mode">
+            <summary>
+            qrPos为台式机， wmhpos 为手持机,zhaji 为闸机
+            </summary>
+        </member>
+        <member name="P:Ticket.ShanglvTicket.ValidateEntity.do">
+            <summary>
+            login登录验证，validate消费验证，query查询验证
+            </summary>
+        </member>
+        <member name="P:Ticket.ShanglvTicket.ValidateEntity.u">
+            <summary>
+            接口系统登录手持无线终端的用户名
+            </summary>
+        </member>
+        <member name="P:Ticket.ShanglvTicket.ValidateEntity._sign">
+            <summary>
+            签名,验证请求是否合法，签名算法请看签名生成方法
+            </summary>
+        </member>
+        <member name="P:Ticket.ShanglvTicket.ValidateEntity.code">
+            <summary>
+            二维码数据，如果是指纹特征时，请使用base64编码后再传上来
+            </summary>
+        </member>
+        <member name="P:Ticket.ShanglvTicket.ValidateEntity.amount">
+            <summary>
+            大于0的整数,参照qrpos标准，0或不传则表示验证该码所有的张数
+            </summary>
+        </member>
+        <member name="P:Ticket.ShanglvTicket.ValidateEntity.is_shuaka">
+            <summary>
+            0或1,可选参数(do=validate时传用参数)，表示是否刷卡，不传时默认0
+            </summary>
+        </member>
+        <member name="P:Ticket.ShanglvTicket.ValidateEntity.is_finger">
+            <summary>
+            0或1,可选参数,表示是否使用指纹
+            </summary>
+        </member>
+        <member name="P:Ticket.ShanglvTicket.ValidateEntity.is_face">
+            <summary>
+            0或1,可选参数,表示是否使用人脸识别
+            </summary>
+        </member>
+        <member name="P:Ticket.ShanglvTicket.ValidateEntity.goods_id">
+            <summary>
+            大于0的整数,产品ID(do=validate时传用参数)，和is_shuaka参数一起使用，表示刷卡购买消费这个产品
+            </summary>
+        </member>
+        <member name="P:Ticket.ShanglvTicket.ValidateEntity.id_number">
+            <summary>
+            身份证号码,产品ID(do=validate时传用参数)，和is_shuaka参数一起使用，有些卡号是绑定身份证实名制的，当刷卡时如果返回status=101418时表示这个卡需要身份证号，可以让游客再刷一下身份证后一起提交
+            </summary>
+        </member>
+        <member name="P:Ticket.ShanglvTicket.ValidateEntity.is_notice">
+            <summary>
+            不传或0或1,验证请求时可选参数，是否返回其他详细信息，默认不返回，传1表示返回
+            </summary>
+        </member>
+        <member name="M:Ticket.ShuZan.Common.GetParameters(System.String,System.String)">
+            <summary>
+            获取接口调用参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.ShuZan.Common.GetForString(System.String,System.String)">
+            <summary>
+            Get接口调用
+            </summary>
+            <param name="para">参数</param>
+            <param name="url">接口路径</param>
+            <returns>Json格式</returns>
+        </member>
+        <member name="M:Ticket.ShuZan.Common.PostHttpResponse(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Text.Encoding)">
+            <summary>
+            POS请求
+            </summary>
+            <param name="url"></param>
+            <param name="parameters"></param>
+            <param name="charset"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.ShuZan.Common.WriteFile(System.String,System.String)">
+            <summary>
+            保存接口返回结果到文件中
+            </summary>
+            <param name="title">日志标题</param>
+            <param name="datastr">日志内容</param>
+        </member>
+        <member name="M:Ticket.ShuZan.Common.MakeSign(System.String,System.String)">
+            <summary>
+            签名
+            </summary>
+            <param name="para"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.ShuZan.Common.GenerateSign(System.Collections.Generic.Dictionary{System.String,System.Object},System.String)">
+            <summary>
+            生成签名
+            </summary>
+            <param name="param"></param>
+            <param name="secret"></param>
+            <param name="signmethod"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.ShuZan.Common.ErrorMessage(System.String)">
+            <summary>
+            错误信息
+            </summary>
+            <param name="erroecode">错误码</param>
+            <returns></returns>
+        </member>
+        <member name="T:Ticket.ShuZan.ShuZanCheck">
+            <summary>
+            数赞接口V1和V2版本
+            </summary>
+        </member>
+        <member name="M:Ticket.ShuZan.ShuZanCheck.Detail(System.String)">
+            <summary>
+            查询
+            </summary>
+            <param name="code">券码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.ShuZan.ShuZanCheck.Clean(System.String,System.String,System.String)">
+            <summary>
+            核销
+            </summary>
+            <param name="code">凭证码。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.ShuZan.ShuZanCheck.list">
+            <summary>
+            获取商品列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.TicketApi.TicketProductList(System.String,System.String,System.String@)">
+            <summary>
+            统一获取商品列表接口
+            </summary>
+            <param name="type">类型</param>
+            <param name="strData">JSON格式数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.TicketApi.QueryTicketInfo(System.String,System.String,System.String@)">
+            <summary>
+            统一票券查询接口
+            </summary>
+            <param name="type">票券类型</param>
+            <param name="strData">JSON格式数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.TicketApi.ConsumeTicket(System.String,System.String,System.String@)">
+            <summary>
+            统一套票核销接口
+            </summary>
+            <param name="type">票券类型</param>
+            <param name="strData">JSON格式数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.TicketApi.ReverseConsume(System.String,System.String,System.String@)">
+            <summary>
+            统一套票撤销验券接口
+            </summary>
+            <param name="type">票券类型</param>
+            <param name="strData">JSON格式数据</param>
+            <returns></returns>
+        </member>
+        <member name="P:Ticket.ZhiKeTong.Parameters.zhiketong_ApiUrl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Ticket.ZhiKeTong.Parameters.zhiketong_merchantCode">
+            <summary>
+            商户ID
+            </summary>
+        </member>
+        <member name="P:Ticket.ZhiKeTong.Parameters.zhiketong_brandid">
+            <summary>
+            集团ID
+            </summary>
+        </member>
+        <member name="P:Ticket.ZhiKeTong.Parameters.zhiketong_cityid">
+            <summary>
+            城市ID
+            </summary>
+        </member>
+        <member name="P:Ticket.ZhiKeTong.Parameters.zhiketong_hotelid">
+            <summary>
+            酒店ID
+            </summary>
+        </member>
+        <member name="P:Ticket.ZhiKeTong.Parameters.zhiketong_userid">
+            <summary>
+            直客通BD创建人
+            </summary>
+        </member>
+        <member name="M:Ticket.ZhiKeTong.RequestHelper.Post(System.String,System.String,System.String,System.String)">
+            <summary>
+            post请求
+            </summary>
+            <param name="url"></param>
+            <param name="pars"></param>
+            <param name="authorization"></param>
+            <param name="encode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Ticket.ZhiKeTong.Utils.TokenUrl">
+            <summary>
+            获取TOKEN
+            </summary>
+        </member>
+        <member name="P:Ticket.ZhiKeTong.Utils.ProductListUrl">
+            <summary>
+            商品列表
+            </summary>
+        </member>
+        <member name="P:Ticket.ZhiKeTong.Utils.ProductInfo">
+            <summary>
+            获取产品详情接⼝
+            </summary>
+        </member>
+        <member name="P:Ticket.ZhiKeTong.Utils.ConsumeTicket">
+            <summary>
+            核销票
+            </summary>
+        </member>
+        <member name="M:Ticket.ZhiKeTong.Utils.WriteFile(System.String,System.String)">
+            <summary>
+            保存接口返回结果到文件中
+            </summary>
+            <param name="title">日志标题</param>
+            <param name="datastr">日志内容</param>
+        </member>
+        <member name="M:Ticket.ZhiKeTong.Utils.LogError(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="ex">异常</param>
+            <param name="des"></param>
+        </member>
+        <member name="M:Ticket.ZhiKeTong.Utils.LogError(System.String,System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="ex">异常</param>
+            <param name="des"></param>
+        </member>
+        <member name="M:Ticket.ZhiKeTong.wxParameterService.GetParameters(System.String,System.String)">
+            <summary>
+            获取接口调用参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.ZhiKeTong.ZKTSDK.GetToken(System.Boolean)">
+            <summary>
+            获取Token
+            </summary>
+            <param name="isFresh"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.ZhiKeTong.ZKTSDK.GetProductList">
+            <summary>
+            获取商品列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.ZhiKeTong.ZKTSDK.GetProductInfo(System.String)">
+            <summary>
+            获取票信息
+            </summary>
+            <param name="ticketCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.ZhiKeTong.ZKTSDK.ConsumeTicket(System.String)">
+            <summary>
+            核销票
+            </summary>
+            <param name="ticketCode"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Ticket.BusinessException">
+            <summary>
+            业务异常
+            </summary>
+        </member>
+        <member name="M:Ticket.BusinessException.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="M:Ticket.ZiWoYou.Common.GetParameters(System.String,System.String)">
+            <summary>
+            获取接口调用参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.ZiWoYou.Common.GetAlyParameters(System.String)">
+            <summary>
+            获取阿里云参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.ZiWoYou.Common.InsertAlyParameters(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            添加阿里云参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.ZiWoYou.Common.UpdateAlyParameters(System.String,System.String,System.String,System.String)">
+            <summary>
+            更新阿里云参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.ZiWoYou.Common.UpdateParameters(System.String,System.String,System.String,System.String)">
+            <summary>
+            更新
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.ZiWoYou.Common.GetForString(System.String,System.String)">
+            <summary>
+            Get接口调用
+            </summary>
+            <param name="para">参数</param>
+            <param name="url">接口路径</param>
+            <returns>Json格式</returns>
+        </member>
+        <member name="M:Ticket.ZiWoYou.Common.PostHttpResponse(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Text.Encoding)">
+            <summary>
+            POS请求
+            </summary>
+            <param name="url"></param>
+            <param name="parameters"></param>
+            <param name="charset"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.ZiWoYou.Common.PostHttp(System.String,System.String,System.Text.Encoding)">
+            <summary>
+            POS请求
+            </summary>
+            <param name="url"></param>
+            <param name="parameters"></param>
+            <param name="charset"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.ZiWoYou.Common.WriteFile(System.String,System.String)">
+            <summary>
+            保存接口返回结果到文件中
+            </summary>
+            <param name="title">日志标题</param>
+            <param name="datastr">日志内容</param>
+        </member>
+        <member name="M:Ticket.ZiWoYou.Common.GenerateSign(System.Collections.Generic.Dictionary{System.String,System.Object},System.String,System.String)">
+            <summary>
+            生成签名
+            </summary>
+            <param name="param"></param>
+            <param name="secret"></param>
+            <param name="signmethod"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.ZiWoYou.Common.ErrorMessage(System.String)">
+            <summary>
+            错误信息
+            </summary>
+            <param name="erroecode">错误码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.ZiWoYou.Common.EncodeBase64(System.Text.Encoding,System.String)">
+            <summary>
+            Base64加密
+            </summary>
+            <param name="codeName">加密采用的编码方式</param>
+            <param name="source">待加密的明文</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ticket.ZiWoYou.Common.EncodeBase64(System.String)">
+            <summary>
+            Base64加密，采用utf8编码方式加密
+            </summary>
+            <param name="source">待加密的明文</param>
+            <returns>加密后的字符串</returns>
+        </member>
+        <member name="M:Ticket.ZiWoYou.Common.DecodeBase64(System.Text.Encoding,System.String)">
+            <summary>
+            Base64解密
+            </summary>
+            <param name="codeName">解密采用的编码方式，注意和加密时采用的方式一致</param>
+            <param name="result">待解密的密文</param>
+            <returns>解密后的字符串</returns>
+        </member>
+        <member name="M:Ticket.ZiWoYou.Common.DecodeBase64(System.String)">
+            <summary>
+            Base64解密，采用utf8编码方式解密
+            </summary>
+            <param name="result">待解密的密文</param>
+            <returns>解密后的字符串</returns>
+        </member>
+        <member name="M:Ticket.ZiWoYou.OrderCheck.#ctor(System.String,System.String,System.String)">
+            <summary>
+            构造方法初始化参数
+            </summary>
+        </member>
+        <member name="M:Ticket.ZiWoYou.OrderCheck.QueryOrder(System.String,System.String,System.String)">
+            自我游供应商接口
+             <summary>
+             订单查询接口
+             </summary>
+             <param name="equimentId">设备型号</param>
+             <param name="name">用户名( 随便约 定)</param>
+             <param name="password">密码(随便约定)</param>
+             <param name="ticketType">验证类型</param>
+             <param name="ticketCode">验证码</param>
+             <param name="isCheckBind">绑定产品检查</param>
+             <returns></returns>
+        </member>
+        <member name="M:Ticket.ZiWoYou.OrderCheck.VerifyOrder(System.String,System.String)">
+            <summary>
+            验证订单
+            </summary>
+            <param name="equimentId">设备型号</param>
+            <param name="name">用户名</param>
+            <param name="password">密码</param>
+            <param name="orderId">订单号</param>
+            <param name="number">验证数量</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,469 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CeCheng.SmartScenicSpot.Webapi</name>
+    </assembly>
+    <members>
+        <member name="T:CeCheng.SmartScenicSpot.Webapi.CheckSignAttribute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Webapi.AutoFac.AutoFacContainerInit">
+            <summary>
+            Autofac容器注入
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Webapi.AutoFac.AutoFacContainerInit.DependencyInJectionByAutoFact(Autofac.ContainerBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="builder"></param>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Webapi.CeChengAutoMapperProfile">
+            <summary>
+            automapper 2022-09-10 jason
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Webapi.CeChengAutoMapperProfile.#ctor">
+            <summary>
+            实体映射
+            </summary>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Webapi.CeChengCustomJsonConvert">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Webapi.CeChengCustomJsonConvert.ResolvePropertyName(System.String)">
+            <summary>
+            重新自定义大小写
+            </summary>
+            <param name="propertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Webapi.Controller.CeChengJwtToken">
+            <summary>
+            Token 生产与获取登陆者部分主要信息
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Webapi.Controller.CeChengJwtToken.CreateToken(CeCheng.SmartScenicSpot.Models.UserTokenInfo)">
+            <summary>
+            生成Tocken
+            </summary>
+            <param name="p"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Webapi.Controller.CeChengJwtToken.GetTockenString(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            获取accessTocken
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Webapi.Controller.CeChengJwtToken.GetTockenInfo(System.String)">
+            <summary>
+            解析Jwt生成的 TockenUser  用户关键信息，主要为一些id
+            </summary>
+            <param name="accesTocken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Webapi.Controller.CeChengRSASign">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Webapi.Controller.CeChengRSASign.RSAEnCrypt(System.String,System.String)">
+            <summary>
+            该函数不给到前段，给到前端公钥 前段自己加密
+            </summary>
+            <param name="jsondata"></param>
+            <param name="pubkey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Webapi.Controller.CeChengRSASign.RSADecrypt(System.String,System.String)">
+            <summary>
+            解密
+            </summary>
+            <param name="encryptData">加密后的数据</param>
+            <param name="encodingUTF8">StringRsaFromartConst.UTF8</param>
+            <returns></returns>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Webapi.Controller.SysAreaController">
+            <summary>
+            09 系统管理相关模块：行政区域
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Webapi.Controller.SysAreaController.#ctor(CeCheng.SmartScenicSpot.Contracts.ISysAreaInterface,Microsoft.Extensions.Logging.ILogger{CeCheng.SmartScenicSpot.Webapi.Controller.SysAreaController})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="SysAreaService"></param>
+            <param name="logService"></param>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Webapi.Controller.SysAreaController.InitPCAData(System.String)">
+            <summary>
+            初始化省市区数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Webapi.Controller.SysAreaController.QueryPCAData(CeCheng.SmartScenicSpot.Models.SysProvinceCityAreaDataQueryDto)">
+            <summary>
+            查询省市区3级联动数据
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Webapi.Controller.CeChengBaseController">
+            <summary>
+            ControllerBase基类 统一获取用户信息，需要认证的情况下才会有数据
+            </summary>
+        </member>
+        <member name="P:CeCheng.SmartScenicSpot.Webapi.Controller.CeChengBaseController._UserTokenInfo">
+            <summary>
+            用户数据
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Webapi.Controller.CeChengBaseController.#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <summary>
+            访问上下文访问者
+            </summary>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Webapi.Controller.HomeController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Webapi.Controller.HomeController.#ctor(CeCheng.SmartScenicSpot.Contracts.ILoginExitContract,Microsoft.Extensions.Logging.ILogger{CeCheng.SmartScenicSpot.Webapi.Controller.HomeController},Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="loginService"></param>
+            <param name="logService"></param>
+            <param name="config"></param>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Webapi.Controller.HomeController.Login(CeCheng.SmartScenicSpot.Models.LoginUserInfo)">
+            <summary>
+            登陆接口，待数据格式统一起来 测试  测试账号 CC000001 密码：123456
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Webapi.Controller.HomeController.LoginNow(CeCheng.SmartScenicSpot.Models.LoginUserInfo,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="dto"></param>
+            <param name="flag">true:RSA加密登录；false:账号密码登录</param>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Webapi.Controller.HomeController.GetImageCodeInfo(System.Int32)">
+            <summary>
+            获取验证码Code
+            </summary>
+            <param name="codeLength"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Webapi.Controller.HomeController.LoginTest">
+            <summary>
+            登陆授权测试
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Webapi.Controller.TestOnlyController">
+            <summary>
+            @auth Jason
+            测试Controller 给出一些案例接口
+            </summary>
+        </member>
+        <member name="F:CeCheng.SmartScenicSpot.Webapi.Controller.TestOnlyController._testService">
+            <summary>
+            测试接口
+            </summary>
+        </member>
+        <member name="F:CeCheng.SmartScenicSpot.Webapi.Controller.TestOnlyController._logserver">
+            <summary>
+            日志
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Webapi.Controller.TestOnlyController.#ctor(CeCheng.SmartScenicSpot.Contracts.ITestInterface,Microsoft.Extensions.Logging.ILogger{CeCheng.SmartScenicSpot.Contracts.ITestInterface},Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <summary>
+            
+            </summary>
+            <param name="testService"></param>
+            <param name="logserver"></param>
+            <param name="contextAccessor"></param>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Webapi.Controller.TestOnlyController.DoTest001">
+            <summary>
+            autofac 测试接口
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Webapi.Controller.TestOnlyController.DoTest002(System.Collections.Generic.List{System.Object})">
+            <summary>
+            post请求接口   list[model] 模型实体，尽量使用 FromBody  格式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Webapi.Controller.TestOnlyController.DoTest003">
+            <summary>
+            查询一些列表的数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Webapi.Controller.TestOnlyController.DoTest004(CeCheng.SmartScenicSpot.Models.MarkQueryInputDto)">
+            <summary>
+            查询一些列表的数据 待分页，强类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Webapi.Controller.TestOnlyController.TestRedis(System.String)">
+            <summary>
+            测试Redis功能
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Webapi.Controller.TestOnlyController.Getmd5Str">
+            <summary>
+            获取Md5数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Webapi.Controller.TestOnlyController.CheckSign(CeCheng.SmartScenicSpot.Models.CheckSgin)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Webapi.Controller.TestOnlyController.TestException(System.String)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Webapi.Controller.TestOnlyController.tetsenum(CeCheng.SmartScenicSpot.Models.NextNumberIdentityEnum)">
+            <summary>
+            测试 获取枚举值
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Webapi.Controller.TestOnlyController.InitAddAutoDateTime">
+            <summary>
+            测试  批量新增表字段 约束 getdate()
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Webapi.Controller.ModeStateActionFilterAttribute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Webapi.Controller.ModeStateActionFilterAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Webapi.Controller.Program">
+            <summary>
+            Auth Jason 2022-09-10
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Webapi.Controller.Program.Main(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Webapi.Controller.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Webapi.CeChengValidateModelHandler">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Webapi.CeChengValidateModelHandler.ConfigureModelBindingExceptionHandling(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Webapi.Filters.CeChengExceptionFilter">
+            <summary>
+            异常过滤器
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Webapi.Filters.CeChengExceptionFilter.#ctor(Microsoft.Extensions.Logging.ILogger{CeCheng.SmartScenicSpot.Webapi.Filters.CeChengExceptionFilter})">
+            <summary>
+            
+            </summary>
+            <param name="logger"></param>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Webapi.Filters.CeChengExceptionFilter.OnExceptionAsync(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Webapi.Filters.CeChengRefeashToken">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Webapi.Filters.CeChengRefeashToken.OnAuthorization(Microsoft.AspNetCore.Mvc.Filters.AuthorizationFilterContext)">
+            <summary>
+              
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Webapi.Filters.CeChengRequestLogFilter">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:CeCheng.SmartScenicSpot.Webapi.Filters.CeChengRequestLogFilter.longtime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Webapi.Filters.CeChengRequestLogFilter.#ctor(Microsoft.Extensions.Logging.ILogger{CeCheng.SmartScenicSpot.Webapi.Filters.CeChengRequestLogFilter})">
+            <summary>
+            
+            </summary>
+            <param name="log"></param>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Webapi.Filters.CeChengRequestLogFilter.OnActionExecutionAsync(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext,Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="next"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Webapi.Filters.CeChengRequestLogFilter.OnResultExecutionAsync(Microsoft.AspNetCore.Mvc.Filters.ResultExecutingContext,Microsoft.AspNetCore.Mvc.Filters.ResultExecutionDelegate)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="next"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Webapi.Filters.CheckTamperProofFilterAttribute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Webapi.Filters.CheckTamperProofFilterAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            数据传输加密过滤器 jason 2022-09-22
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Webapi.JsonSerlazerDoubleDecimalNod0Converter">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Webapi.JsonSerlazerDoubleDecimalNod0Converter.CanConvert(System.Type)">
+            <summary>
+            可以转换的类型
+            </summary>
+            <param name="objectType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Webapi.JsonSerlazerDoubleDecimalNod0Converter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            
+            </summary>
+            <param name="reader"></param>
+            <param name="objectType"></param>
+            <param name="existingValue"></param>
+            <param name="serializer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Webapi.JsonSerlazerDoubleDecimalNod0Converter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+            <param name="value"></param>
+            <param name="serializer"></param>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Webapi.Services.LogAutoRunningService">
+            <summary>
+            系统自带的后台程序服务
+            </summary>
+        </member>
+        <member name="F:CeCheng.SmartScenicSpot.Webapi.Services.LogAutoRunningService._logserver">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Webapi.Services.LogAutoRunningService.#ctor(Microsoft.Extensions.Logging.ILogger{CeCheng.SmartScenicSpot.Webapi.Services.LogAutoRunningService})">
+            <summary>
+            
+            </summary>
+            <param name="logserver"></param>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Webapi.Services.LogAutoRunningService.ExecuteAsync(System.Threading.CancellationToken)">
+            <summary>
+            
+            </summary>
+            <param name="stoppingToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Webapi.Startup">
+            <summary>
+            Auth Jason 2022-09-10
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Webapi.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="P:CeCheng.SmartScenicSpot.Webapi.Startup.Configuration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Webapi.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            注册服务相关
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Webapi.Startup.ConfigureContainer(Autofac.ContainerBuilder)">
+            <summary>
+            AutoFact Container Init
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Webapi.Startup.SwaggerService(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            swagger
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Webapi.Startup.JwtService(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            jwt
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Webapi.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+             <summary>
+            配置中间件相关
+             </summary>
+             <param name="app"></param>
+             <param name="env"></param>
+        </member>
+    </members>
+</doc>

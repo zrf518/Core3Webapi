@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CeCheng.SmartScenicSpot.Webapi", "CeCheng.SmartScenicSpot.Webapi.csproj", "{3D6DF0C7-BD0A-4BF4-AAE7-BD24580BFB7C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CeCheng.SmartScenicSpot.Contracts", "..\CeCheng.SmartScenicSpot.Contracts\CeCheng.SmartScenicSpot.Contracts.csproj", "{031A3195-71A4-4191-8E9D-2CB5FDF17F02}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CeCheng.SmartScenicSpot.Models", "..\CeCheng.SmartScenicSpot.Models\CeCheng.SmartScenicSpot.Models.csproj", "{9BAFBC70-BD21-47B3-A744-D81142BFDAB7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CeCheng.SmartScenicSpot.Services", "..\CeCheng.SmartScenicSpot.Services\CeCheng.SmartScenicSpot.Services.csproj", "{08577B5C-FA5C-4830-B818-DA067DDE8830}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CeCheng.SmartScenicSpot.Commoms", "..\CeCheng.SmartScenicSpot.Commoms\CeCheng.SmartScenicSpot.Commoms.csproj", "{32982B75-2D0B-4019-9251-035B7E6AB39D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D6DF0C7-BD0A-4BF4-AAE7-BD24580BFB7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D6DF0C7-BD0A-4BF4-AAE7-BD24580BFB7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D6DF0C7-BD0A-4BF4-AAE7-BD24580BFB7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D6DF0C7-BD0A-4BF4-AAE7-BD24580BFB7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{031A3195-71A4-4191-8E9D-2CB5FDF17F02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{031A3195-71A4-4191-8E9D-2CB5FDF17F02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{031A3195-71A4-4191-8E9D-2CB5FDF17F02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{031A3195-71A4-4191-8E9D-2CB5FDF17F02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BAFBC70-BD21-47B3-A744-D81142BFDAB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BAFBC70-BD21-47B3-A744-D81142BFDAB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BAFBC70-BD21-47B3-A744-D81142BFDAB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BAFBC70-BD21-47B3-A744-D81142BFDAB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08577B5C-FA5C-4830-B818-DA067DDE8830}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08577B5C-FA5C-4830-B818-DA067DDE8830}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08577B5C-FA5C-4830-B818-DA067DDE8830}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08577B5C-FA5C-4830-B818-DA067DDE8830}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32982B75-2D0B-4019-9251-035B7E6AB39D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32982B75-2D0B-4019-9251-035B7E6AB39D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32982B75-2D0B-4019-9251-035B7E6AB39D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32982B75-2D0B-4019-9251-035B7E6AB39D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CD1082D9-47D8-4E1F-866B-1D083FA6AFB5}
+	EndGlobalSection
+EndGlobal

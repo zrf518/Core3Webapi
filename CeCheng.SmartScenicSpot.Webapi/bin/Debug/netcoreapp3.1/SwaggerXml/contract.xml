@@ -1,0 +1,1548 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CeCheng.SmartScenicSpot.Contracts</name>
+    </assembly>
+    <members>
+        <member name="T:CeCheng.SmartScenicSpot.Contracts.ISBranchSystemInfosInterface">
+            <summary>
+            分店系统表 有营业日期，四舍五入，ip，数据库等信息
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISBranchSystemInfosInterface.AddSystemBranchInfo(CeCheng.SmartScenicSpot.Models.SBranchSystemInfosAddDto)">
+            <summary>
+            新增和编辑  分店系统表 新增id不填或者为0；修改时id必填
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISBranchSystemInfosInterface.EditSystemBranchInfo(CeCheng.SmartScenicSpot.Models.SBranchSystemInfosEditDto)">
+            <summary>
+            编辑  分店系统表 修改时id必填
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISBranchSystemInfosInterface.QuerySystemBranchInfo(CeCheng.SmartScenicSpot.Models.SBranchSystemInfosQueryDto)">
+            <summary>
+            查询分店系统表
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISBranchSystemInfosInterface.RemoveSystemBranchInfo(CeCheng.SmartScenicSpot.Models.QueryByIdDto)">
+            <summary>
+            删除系统分店表
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Contracts.IBctDeptPrintInterface">
+            <summary>
+            消费类别接口定义
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IBctDeptPrintInterface.AddBctDeptPrintAsync(CeCheng.SmartScenicSpot.Models.BctDeptPrintDto)">
+            <summary>
+            新增消费类别
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IBctDeptPrintInterface.EditBctDeptPrintAsync(CeCheng.SmartScenicSpot.Models.BctDeptPrintDto)">
+            <summary>
+            编辑消费类别
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IBctDeptPrintInterface.QueryBctDeptPrintAsync(CeCheng.SmartScenicSpot.Models.BctDeptPrintSearchParamDto)">
+            <summary>
+            查询消费类别
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IBctDeptPrintInterface.RemoveBctDeptPrintAsync(System.String,System.Int32)">
+            <summary>
+            删除消费类别
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IBctDeptPrintInterface.BattchRemoveBctDeptPrintAsync(System.String,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            批量删除消费类别
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Contracts.IBranchInterface">
+            <summary>
+            分店接口定义
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IBranchInterface.AddBranchAsync(CeCheng.SmartScenicSpot.Models.BranchDto)">
+            <summary>
+            新增分店
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IBranchInterface.EditBranchAsync(CeCheng.SmartScenicSpot.Models.BranchDto)">
+            <summary>
+            编辑分店
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IBranchInterface.QueryBranchAsync(CeCheng.SmartScenicSpot.Models.BranchSearchParamDto)">
+            <summary>
+            查询分店
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IBranchInterface.RemoveBranchAsync(System.String,System.Int32)">
+            <summary>
+            删除分店
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IBranchInterface.BattchRemoveBranchAsync(System.String,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            批量删除分店
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Contracts.IBranchSystemInterface">
+            <summary>
+            分店系统接口定义
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IBranchSystemInterface.AddBranchSystemAsync(CeCheng.SmartScenicSpot.Models.BranchSystemDto)">
+            <summary>
+            新增分店系统
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IBranchSystemInterface.EditBranchSystemAsync(CeCheng.SmartScenicSpot.Models.BranchSystemDto)">
+            <summary>
+            编辑分店系统
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IBranchSystemInterface.QueryBranchSystemAsync(CeCheng.SmartScenicSpot.Models.BranchSystemSearchParamDto)">
+            <summary>
+            查询分店系统
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IBranchSystemInterface.RemoveBranchSystemAsync(System.String,System.Int32)">
+            <summary>
+            删除分店系统
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IBranchSystemInterface.BattchRemoveBranchSystemAsync(System.String,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            批量删除分店系统
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Contracts.ICardReaderInterface">
+            <summary>
+            读卡器设置接口定义
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ICardReaderInterface.AddCardReaderAsync(CeCheng.SmartScenicSpot.Models.CardReaderDto)">
+            <summary>
+            新增读卡器设置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ICardReaderInterface.EditCardReaderAsync(CeCheng.SmartScenicSpot.Models.CardReaderDto)">
+            <summary>
+            编辑读卡器设置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ICardReaderInterface.QueryCardReaderAsync(CeCheng.SmartScenicSpot.Models.CardReaderSearchParamDto)">
+            <summary>
+            查询读卡器设置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ICardReaderInterface.RemoveCardReaderAsync(System.String,System.Int32)">
+            <summary>
+            删除读卡器设置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ICardReaderInterface.BattchRemoveCardReaderAsync(System.String,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            批量删除读卡器设置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Contracts.IChargeCodeInterface">
+            <summary>
+            消费类别接口定义
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IChargeCodeInterface.AddChargeCodeAsync(CeCheng.SmartScenicSpot.Models.ChargeCodeDto)">
+            <summary>
+            新增消费类别
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IChargeCodeInterface.EditChargeCodeAsync(CeCheng.SmartScenicSpot.Models.ChargeCodeDto)">
+            <summary>
+            编辑消费类别
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IChargeCodeInterface.QueryChargeCodeAsync(CeCheng.SmartScenicSpot.Models.ChargeCodeSearchParamDto)">
+            <summary>
+            查询消费类别
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IChargeCodeInterface.RemoveChargeCodeAsync(System.String,System.Int32)">
+            <summary>
+            删除消费类别
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IChargeCodeInterface.BattchRemoveChargeCodeAsync(System.String,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            批量删除消费类别
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Contracts.IChargeTypeInterface">
+            <summary>
+            消费大类接口定义
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IChargeTypeInterface.AddChargeTypeAsync(CeCheng.SmartScenicSpot.Models.ChargeTypeDto)">
+            <summary>
+            新增消费大类
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IChargeTypeInterface.EditChargeTypeAsync(CeCheng.SmartScenicSpot.Models.ChargeTypeDto)">
+            <summary>
+            编辑消费大类
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IChargeTypeInterface.QueryChargeTypeAsync(CeCheng.SmartScenicSpot.Models.ChargeTypeSearchParamDto)">
+            <summary>
+            查询消费大类
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IChargeTypeInterface.RemoveChargeTypeAsync(System.String,System.Int32)">
+            <summary>
+            删除消费大类
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IChargeTypeInterface.BattchRemoveChargeTypeAsync(System.String,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            批量删除消费大类
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Contracts.IConsumeItemInterface">
+            <summary>
+            消费项目接口定义
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IConsumeItemInterface.AddConsumeItemAsync(CeCheng.SmartScenicSpot.Models.ConsumeItemDto)">
+            <summary>
+            新增消费项目
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IConsumeItemInterface.EditConsumeItemAsync(CeCheng.SmartScenicSpot.Models.ConsumeItemDto)">
+            <summary>
+            编辑消费项目
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IConsumeItemInterface.QueryConsumeItemAsync(CeCheng.SmartScenicSpot.Models.ConsumeItemSearchParamDto)">
+            <summary>
+            查询消费项目
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IConsumeItemInterface.RemoveConsumeItemAsync(System.String,System.Int32)">
+            <summary>
+            删除消费项目
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IConsumeItemInterface.BattchRemoveConsumeItemAsync(System.String,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            批量删除消费项目
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Contracts.ICtPcInterface">
+            <summary>
+            读卡器类型分组接口定义
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ICtPcInterface.AddCtPcAsync(CeCheng.SmartScenicSpot.Models.CtPcDto)">
+            <summary>
+            新增读卡器类型分组
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ICtPcInterface.EditCtPcAsync(CeCheng.SmartScenicSpot.Models.CtPcDto)">
+            <summary>
+            编辑读卡器类型分组
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ICtPcInterface.QueryCtPcAsync(CeCheng.SmartScenicSpot.Models.CtPcSearchParamDto)">
+            <summary>
+            查询读卡器类型分组
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ICtPcInterface.RemoveCtPcAsync(System.String,System.Int32)">
+            <summary>
+            删除读卡器类型分组
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ICtPcInterface.BattchRemoveCtPcAsync(System.String,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            批量删除读卡器类型分组
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Contracts.IDinFoodInterface">
+            <summary>
+            自助餐设置接口定义
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IDinFoodInterface.AddDinFoodAsync(CeCheng.SmartScenicSpot.Models.DinFoodDto)">
+            <summary>
+            新增自助餐设置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IDinFoodInterface.EditDinFoodAsync(CeCheng.SmartScenicSpot.Models.DinFoodDto)">
+            <summary>
+            编辑自助餐设置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IDinFoodInterface.QueryDinFoodAsync(CeCheng.SmartScenicSpot.Models.DinFoodSearchParamDto)">
+            <summary>
+            查询自助餐设置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IDinFoodInterface.RemoveDinFoodAsync(System.String,System.Int32)">
+            <summary>
+            删除自助餐设置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IDinFoodInterface.BattchRemoveDinFoodAsync(System.String,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            批量删除自助餐设置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Contracts.IGroupInterface">
+            <summary>
+            集团总店接口定义
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IGroupInterface.AddGroupAsync(CeCheng.SmartScenicSpot.Models.GroupDto)">
+            <summary>
+            新增集团总店
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IGroupInterface.EditGroupAsync(CeCheng.SmartScenicSpot.Models.GroupDto)">
+            <summary>
+            编辑集团总店
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IGroupInterface.QueryGroupAsync(CeCheng.SmartScenicSpot.Models.GroupSearchParamDto)">
+            <summary>
+            查询集团总店
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IGroupInterface.RemoveGroupAsync(System.String,System.Int32)">
+            <summary>
+            删除集团总店
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IGroupInterface.BattchRemoveGroupAsync(System.String,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            批量删除集团总店
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Contracts.IMenuRoleInterface">
+            <summary>
+            菜单操作 curd
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IMenuRoleInterface.AddMenu(CeCheng.SmartScenicSpot.Models.SsysMenuEntity)">
+            <summary>
+             新增菜单
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IMenuRoleInterface.EditMenu(CeCheng.SmartScenicSpot.Models.SsysMenuEntity)">
+            <summary>
+            编辑菜单
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IMenuRoleInterface.RemoveMenu(System.Int32,System.Boolean)">
+            <summary>
+            软件删除菜单
+            </summary>
+            <param name="MenuId"></param>
+            <param name="isParentMenu"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IMenuRoleInterface.GetMenus(CeCheng.SmartScenicSpot.Models.GetMenuListDataByTenantId)">
+            <summary>
+            获取一个平面的查询列表数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IMenuRoleInterface.AddRole(CeCheng.SmartScenicSpot.Models.SsysRolesEntity)">
+            <summary>
+             新增角色
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IMenuRoleInterface.EditRole(CeCheng.SmartScenicSpot.Models.SsysRolesEntity)">
+            <summary>
+            编辑角色
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IMenuRoleInterface.RemoveRole(System.Int32,System.Int32)">
+            <summary>
+            软件删除角色
+            </summary>
+            <param name="id"></param>
+            <param name="TenantId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IMenuRoleInterface.GetRoles(CeCheng.SmartScenicSpot.Models.QueryOneStrDtoWithPageNation)">
+            <summary>
+            获取一个平面的查询列表角色数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IMenuRoleInterface.GetRoleMenusRelations(System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            获取角色对应的菜单树形结构的数据
+            </summary>
+            <param name="TenantId">租户id</param>
+            <param name="RoleId">查询全部角色数据；等于0：全部不打钩： 否则根据角色id来查询对应的菜单数据是否true打钩有权限 </param>
+            <param name="onlyThisRoleMenusData">true:当前的角色菜单数据；false:全部菜单</param>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IMenuRoleInterface.AddRoleMenus(CeCheng.SmartScenicSpot.Models.AddRoleMenuDto)">
+            <summary>
+            新增或编辑角色对应的菜单关系数据  
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Contracts.IOutletsSetupInterface">
+            <summary>
+            营业点接口定义
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IOutletsSetupInterface.AddOutletsSetupAsync(CeCheng.SmartScenicSpot.Models.OutletsSetupDto)">
+            <summary>
+            新增营业点
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IOutletsSetupInterface.EditOutletsSetupAsync(CeCheng.SmartScenicSpot.Models.OutletsSetupDto)">
+            <summary>
+            编辑营业点
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IOutletsSetupInterface.QueryOutletsSetupAsync(CeCheng.SmartScenicSpot.Models.OutletsSetupDto)">
+            <summary>
+            查询营业点
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IOutletsSetupInterface.RemoveOutletsSetupAsync(System.String,System.Int32)">
+            <summary>
+            删除营业点
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IOutletsSetupInterface.BattchRemoveOutletsSetupAsync(System.String,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            批量删除营业点
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Contracts.IPayCodeInterface">
+            <summary>
+            付款方式接口定义
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IPayCodeInterface.AddPayCodeAsync(CeCheng.SmartScenicSpot.Models.PayCodeDto)">
+            <summary>
+            新增付款方式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IPayCodeInterface.EditPayCodeAsync(CeCheng.SmartScenicSpot.Models.PayCodeDto)">
+            <summary>
+            编辑付款方式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IPayCodeInterface.QueryPayCodeAsync(CeCheng.SmartScenicSpot.Models.PayCodeSearchParamDto)">
+            <summary>
+            查询付款方式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IPayCodeInterface.RemovePayCodeAsync(System.String,System.Int32)">
+            <summary>
+            删除付款方式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IPayCodeInterface.BattchRemovePayCodeAsync(System.String,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            批量删除付款方式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IPayCodeInterface.QueryBarnchPayCodeInfos(CeCheng.SmartScenicSpot.Models.QueryBranchPayCodeInfoDto)">
+            <summary>
+            =====查询获取分店配置的支付类型信息
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Contracts.IPayTicketTypeInterface">
+            <summary>
+            条码劵设置接口定义
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IPayTicketTypeInterface.AddPayTicketTypeAsync(CeCheng.SmartScenicSpot.Models.PayTicketTypeDto)">
+            <summary>
+            新增条码劵设置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IPayTicketTypeInterface.EditPayTicketTypeAsync(CeCheng.SmartScenicSpot.Models.PayTicketTypeDto)">
+            <summary>
+            编辑条码劵设置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IPayTicketTypeInterface.QueryPayTicketTypeAsync(CeCheng.SmartScenicSpot.Models.PayTicketTypeSearchParamDto)">
+            <summary>
+            查询条码劵设置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IPayTicketTypeInterface.RemovePayTicketTypeAsync(System.String,System.Int32)">
+            <summary>
+            删除条码劵设置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IPayTicketTypeInterface.BattchRemovePayTicketTypeAsync(System.String,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            批量删除条码劵设置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Contracts.IPayTypeInterface">
+            <summary>
+            付款方式大类接口定义
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IPayTypeInterface.AddPayTypeAsync(CeCheng.SmartScenicSpot.Models.PayTypeDto)">
+            <summary>
+            新增付款方式大类
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IPayTypeInterface.EditPayTypeAsync(CeCheng.SmartScenicSpot.Models.PayTypeDto)">
+            <summary>
+            编辑付款方式大类
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IPayTypeInterface.QueryPayTypeAsync(CeCheng.SmartScenicSpot.Models.PayTypeDto)">
+            <summary>
+            查询付款方式大类
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IPayTypeInterface.RemovePayTypeAsync(System.String,System.Int32)">
+            <summary>
+            删除付款方式大类
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IPayTypeInterface.BattchRemovePayTypeAsync(System.String,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            批量删除付款方式大类
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Contracts.IPrintTemplateInterface">
+            <summary>
+            打印模板接口定义
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IPrintTemplateInterface.AddPrintTemplateAsync(CeCheng.SmartScenicSpot.Models.PrintTemplateDto)">
+            <summary>
+            新增打印模板
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IPrintTemplateInterface.EditPrintTemplateAsync(CeCheng.SmartScenicSpot.Models.PrintTemplateDto)">
+            <summary>
+            编辑打印模板
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IPrintTemplateInterface.QueryPrintTemplateAsync(CeCheng.SmartScenicSpot.Models.PrintTemplateSearchParamDto)">
+            <summary>
+            查询打印模板
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IPrintTemplateInterface.RemovePrintTemplateAsync(System.String,System.Int32)">
+            <summary>
+            删除打印模板
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IPrintTemplateInterface.BattchRemovePrintTemplateAsync(System.String,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            批量删除打印模板
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Contracts.ISMPayLogInterface">
+            <summary>
+            扫码付款记录接口定义
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISMPayLogInterface.AddSMPayLog(CeCheng.SmartScenicSpot.Models.SMPayLogEntity)">
+            <summary>
+            新增扫码付款记录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISMPayLogInterface.EditSMPayLog(CeCheng.SmartScenicSpot.Models.SMPayLogEntity)">
+            <summary>
+            编辑扫码付款记录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISMPayLogInterface.QuerySMPayLogByOutTradeNo(CeCheng.SmartScenicSpot.Models.SMPayLogDto)">
+            <summary>
+            根据策城交易流水号查询付款记录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISMPayLogInterface.QuerySMRefundLogByOutTradeNo(CeCheng.SmartScenicSpot.Models.SMPayLogDto)">
+            <summary>
+            根据策城交易流水号查询已成功退款记录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISMPayLogInterface.QuerySMPayLogAsync(CeCheng.SmartScenicSpot.Models.SMPayLogSearchParamDto)">
+            <summary>
+            查询扫码付款记录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISMPayLogInterface.RemoveSMPayLogAsync(System.String,System.Int32)">
+            <summary>
+            删除扫码付款记录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Contracts.ISysAreaInterface">
+            <summary>
+            行政区域接口定义
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysAreaInterface.QuerySysAreaAsync(CeCheng.SmartScenicSpot.Models.SysAreaDto)">
+            <summary>
+            查询行政区域
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysAreaInterface.InitPCAData">
+             <summary>
+            初始化省市区数据
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysAreaInterface.QueryPCAData(CeCheng.SmartScenicSpot.Models.SysProvinceCityAreaDataQueryDto)">
+            <summary>
+            查询省市区3级联动数据
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Contracts.ISysCombDetailInterface">
+            <summary>
+            套餐明细接口定义
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysCombDetailInterface.AddSysCombDetailAsync(CeCheng.SmartScenicSpot.Models.SysCombDetailDto)">
+            <summary>
+            新增套餐明细
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysCombDetailInterface.EditSysCombDetailAsync(CeCheng.SmartScenicSpot.Models.SysCombDetailDto)">
+            <summary>
+            编辑套餐明细
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysCombDetailInterface.QuerySysCombDetailAsync(CeCheng.SmartScenicSpot.Models.SysCombDetailSearchParamDto)">
+            <summary>
+            查询套餐明细
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysCombDetailInterface.RemoveSysCombDetailAsync(System.String,System.Int32)">
+            <summary>
+            删除套餐明细
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysCombDetailInterface.BattchRemoveSysCombDetailAsync(System.String,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            批量删除套餐明细
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Contracts.ISysCombGroupInterface">
+            <summary>
+            套餐分组接口定义
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysCombGroupInterface.AddSysCombGroupAsync(CeCheng.SmartScenicSpot.Models.SysCombGroupDto)">
+            <summary>
+            新增套餐分组
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysCombGroupInterface.EditSysCombGroupAsync(CeCheng.SmartScenicSpot.Models.SysCombGroupDto)">
+            <summary>
+            编辑套餐分组
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysCombGroupInterface.QuerySysCombGroupAsync(CeCheng.SmartScenicSpot.Models.SysCombGroupSearchParamDto)">
+            <summary>
+            查询套餐分组
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysCombGroupInterface.RemoveSysCombGroupAsync(System.String,System.Int32)">
+            <summary>
+            删除套餐分组
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysCombGroupInterface.BattchRemoveSysCombGroupAsync(System.String,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            批量删除套餐分组
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Contracts.ISysCombInterface">
+            <summary>
+            套餐维护接口定义
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysCombInterface.AddSysCombAsync(CeCheng.SmartScenicSpot.Models.SysCombDto)">
+            <summary>
+            新增套餐维护
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysCombInterface.EditSysCombAsync(CeCheng.SmartScenicSpot.Models.SysCombDto)">
+            <summary>
+            编辑套餐维护
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysCombInterface.QuerySysCombAsync(CeCheng.SmartScenicSpot.Models.SysCombDto)">
+            <summary>
+            查询套餐维护
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysCombInterface.RemoveSysCombAsync(System.String,System.Int32)">
+            <summary>
+            删除套餐维护
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysCombInterface.BattchRemoveSysCombAsync(System.String,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            批量删除套餐维护
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Contracts.ISysDepartmentInterface">
+            <summary>
+            部门接口定义
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysDepartmentInterface.AddSysDepartmentAsync(CeCheng.SmartScenicSpot.Models.SysDepartmentDto)">
+            <summary>
+            新增部门
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysDepartmentInterface.EditSysDepartmentAsync(CeCheng.SmartScenicSpot.Models.SysDepartmentDto)">
+            <summary>
+            编辑部门
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysDepartmentInterface.QuerySysDepartmentAsync(CeCheng.SmartScenicSpot.Models.SysDepartmentSearchParamDto)">
+            <summary>
+            查询部门
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysDepartmentInterface.RemoveSysDepartmentAsync(System.String,System.Int32)">
+            <summary>
+            删除部门
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysDepartmentInterface.BattchRemoveSysDepartmentAsync(System.String,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            批量删除部门
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Contracts.ISysDepartmentTypeInterface">
+            <summary>
+            部门类别接口定义
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysDepartmentTypeInterface.AddSysDepartmentTypeAsync(CeCheng.SmartScenicSpot.Models.SysDepartmentTypeDto)">
+            <summary>
+            新增部门类别
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysDepartmentTypeInterface.EditSysDepartmentTypeAsync(CeCheng.SmartScenicSpot.Models.SysDepartmentTypeDto)">
+            <summary>
+            编辑部门类别
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysDepartmentTypeInterface.QuerySysDepartmentTypeAsync(CeCheng.SmartScenicSpot.Models.SysDepartmentTypeDto)">
+            <summary>
+            查询部门类别
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysDepartmentTypeInterface.RemoveSysDepartmentTypeAsync(System.String,System.Int32)">
+            <summary>
+            删除部门类别
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysDepartmentTypeInterface.BattchRemoveSysDepartmentTypeAsync(System.String,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            批量删除部门类别
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Contracts.ISysDictionaryInfoInterface">
+            <summary>
+            字典信息接口定义
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysDictionaryInfoInterface.QuerySysDictionaryInfoAsync(CeCheng.SmartScenicSpot.Models.SysDictionaryInfoDto)">
+            <summary>
+            查询字典信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Contracts.ISysDiscTypeInterface">
+            <summary>
+            折扣设置接口定义
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysDiscTypeInterface.AddSysDiscTypeAsync(CeCheng.SmartScenicSpot.Models.SysDiscTypeDto)">
+            <summary>
+            新增折扣设置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysDiscTypeInterface.EditSysDiscTypeAsync(CeCheng.SmartScenicSpot.Models.SysDiscTypeDto)">
+            <summary>
+            编辑折扣设置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysDiscTypeInterface.QuerySysDiscTypeAsync(CeCheng.SmartScenicSpot.Models.SysDiscTypeSearchParamDto)">
+            <summary>
+            查询折扣设置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysDiscTypeInterface.RemoveSysDiscTypeAsync(System.String,System.Int32)">
+            <summary>
+            删除折扣设置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysDiscTypeInterface.BattchRemoveSysDiscTypeAsync(System.String,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            批量删除折扣设置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Contracts.ISysPayGroupInterface">
+            <summary>
+            支付组接口定义
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysPayGroupInterface.AddSysPayGroupAsync(CeCheng.SmartScenicSpot.Models.SysPayGroupDto)">
+            <summary>
+            新增支付组
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysPayGroupInterface.EditSysPayGroupAsync(CeCheng.SmartScenicSpot.Models.SysPayGroupDto)">
+            <summary>
+            编辑支付组
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysPayGroupInterface.QuerySysPayGroupAsync(CeCheng.SmartScenicSpot.Models.SysPayGroupDto)">
+            <summary>
+            查询支付组
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysPayGroupInterface.GetPayGroup">
+            <summary>
+            获取我们支付类型，方便页面绑定关系
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysPayGroupInterface.RemoveSysPayGroupAsync(System.String,System.Int32)">
+            <summary>
+            删除支付组
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysPayGroupInterface.BattchRemoveSysPayGroupAsync(System.String,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            批量删除支付组
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysPayGroupInterface.QuerySysPayGroupByPayCode(CeCheng.SmartScenicSpot.Models.PayCodeDto)">
+            <summary>
+            根据付款方式代码，查对应的付款方式组
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysPayGroupInterface.QuerySysPayGroupByCode(System.String)">
+            <summary>
+            根据支付组代码，查对应的支付组组
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Contracts.ISysPayParamaterInterface">
+            <summary>
+            支付参数接口定义
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysPayParamaterInterface.AddSysPayParamaterAsync(CeCheng.SmartScenicSpot.Models.SysPayParamaterDto)">
+            <summary>
+            新增支付参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysPayParamaterInterface.EditSysPayParamaterAsync(CeCheng.SmartScenicSpot.Models.SysPayParamaterDto)">
+            <summary>
+            编辑支付参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysPayParamaterInterface.QuerySysPayParamaterAsync(CeCheng.SmartScenicSpot.Models.SysPayParamaterDto)">
+            <summary>
+            查询支付参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysPayParamaterInterface.RemoveSysPayParamaterAsync(System.String,System.Int32)">
+            <summary>
+            删除支付参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysPayParamaterInterface.BattchRemoveSysPayParamaterAsync(System.String,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            批量删除支付参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Contracts.ISysProduceInterface">
+            <summary>
+            出品说明接口定义
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysProduceInterface.AddSysProduceAsync(CeCheng.SmartScenicSpot.Models.SysProduceDto)">
+            <summary>
+            新增出品说明
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysProduceInterface.EditSysProduceAsync(CeCheng.SmartScenicSpot.Models.SysProduceDto)">
+            <summary>
+            编辑出品说明
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysProduceInterface.QuerySysProduceAsync(CeCheng.SmartScenicSpot.Models.SysProduceSearchParamDto)">
+            <summary>
+            查询出品说明
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysProduceInterface.RemoveSysProduceAsync(System.String,System.Int32)">
+            <summary>
+            删除出品说明
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysProduceInterface.BattchRemoveSysProduceAsync(System.String,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            批量删除出品说明
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Contracts.ISysProduceTypeInterface">
+            <summary>
+            出品大类接口定义
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysProduceTypeInterface.AddSysProduceTypeAsync(CeCheng.SmartScenicSpot.Models.SysProduceTypeDto)">
+            <summary>
+            新增出品大类
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysProduceTypeInterface.EditSysProduceTypeAsync(CeCheng.SmartScenicSpot.Models.SysProduceTypeDto)">
+            <summary>
+            编辑出品大类
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysProduceTypeInterface.QuerySysProduceTypeAsync(CeCheng.SmartScenicSpot.Models.SysProduceTypeDto)">
+            <summary>
+            查询出品大类
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysProduceTypeInterface.RemoveSysProduceTypeAsync(System.String,System.Int32)">
+            <summary>
+            删除出品大类
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysProduceTypeInterface.BattchRemoveSysProduceTypeAsync(System.String,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            批量删除出品大类
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Contracts.ISysSalerInterface">
+            <summary>
+            销售员接口定义
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysSalerInterface.AddSysSalerAsync(CeCheng.SmartScenicSpot.Models.SysSalerDto)">
+            <summary>
+            新增销售员
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysSalerInterface.EditSysSalerAsync(CeCheng.SmartScenicSpot.Models.SysSalerDto)">
+            <summary>
+            编辑销售员
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysSalerInterface.QuerySysSalerAsync(CeCheng.SmartScenicSpot.Models.SysSalerSearchParamDto)">
+            <summary>
+            查询销售员
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysSalerInterface.RemoveSysSalerAsync(System.String,System.Int32)">
+            <summary>
+            删除销售员
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysSalerInterface.BattchRemoveSysSalerAsync(System.String,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            批量删除销售员
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Contracts.ISysUnitInterface">
+            <summary>
+            计量单位接口定义
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysUnitInterface.AddSysUnitAsync(CeCheng.SmartScenicSpot.Models.SysUnitDto)">
+            <summary>
+            新增计量单位
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysUnitInterface.EditSysUnitAsync(CeCheng.SmartScenicSpot.Models.SysUnitDto)">
+            <summary>
+            编辑计量单位
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysUnitInterface.QuerySysUnitAsync(CeCheng.SmartScenicSpot.Models.SysUnitDto)">
+            <summary>
+            查询计量单位
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysUnitInterface.RemoveSysUnitAsync(System.String,System.Int32)">
+            <summary>
+            删除计量单位
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysUnitInterface.BattchRemoveSysUnitAsync(System.String,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            批量删除计量单位
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Contracts.ISysUserInterface">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysUserInterface.AddSysUserAsync(CeCheng.SmartScenicSpot.Models.SysUserEntity)">
+            <summary>
+            新增用户
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysUserInterface.EditSysUserAsync(CeCheng.SmartScenicSpot.Models.SysUserEntity)">
+            <summary>
+            编辑用户
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysUserInterface.QuerySysUserAsync(System.Int32,System.String,System.String,System.Double,System.Int32,System.Int32)">
+            <summary>
+             查询用户   分页列表
+            </summary>
+            <param name="UserWorkNo"></param>
+            <param name="UserName"></param>
+            <param name="uid"></param>
+            <param name="Telephone"></param>
+            <param name="PageIndex"></param>
+            <param name="PageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysUserInterface.RemoveSysUserAsync(System.Int32)">
+            <summary>
+            删除用户
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysUserInterface.EditUserPwdForselfAsync(CeCheng.SmartScenicSpot.Models.EditUserPwdByselfDto)">
+            <summary>
+            重置自己的密码
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysUserInterface.EditUserPwdByMagAsync(CeCheng.SmartScenicSpot.Models.ResertUserPasswordDto)">
+            <summary>
+            管理员修改用户密码
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ISysUserInterface.GetLogsInfoAsync(CeCheng.SmartScenicSpot.Models.UserTokenInfo,CeCheng.SmartScenicSpot.Models.SysLogInputDto)">
+            <summary>
+            获取日志信息
+            </summary>
+            <param name="user"></param>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Contracts.IZaJiInfoInterface">
+            <summary>
+            闸机设置接口定义
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IZaJiInfoInterface.AddZaJiInfoAsync(CeCheng.SmartScenicSpot.Models.ZaJiInfoDto)">
+            <summary>
+            新增闸机设置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IZaJiInfoInterface.EditZaJiInfoAsync(CeCheng.SmartScenicSpot.Models.ZaJiInfoEditDto)">
+            <summary>
+            编辑闸机设置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IZaJiInfoInterface.QueryZaJiInfoAsync(CeCheng.SmartScenicSpot.Models.ZaJiInfoSearchParamDto)">
+            <summary>
+            查询闸机设置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IZaJiInfoInterface.RemoveZaJiInfoAsync(System.String,System.Int32)">
+            <summary>
+            删除闸机设置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IZaJiInfoInterface.BattchRemoveZaJiInfoAsync(System.String,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            批量删除闸机设置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Contracts.IZaJiInfoTypeInterface">
+            <summary>
+            闸机类型接口定义
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IZaJiInfoTypeInterface.AddZaJiInfoTypeAsync(CeCheng.SmartScenicSpot.Models.ZaJiInfoTypeDto)">
+            <summary>
+            新增闸机类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IZaJiInfoTypeInterface.EditZaJiInfoTypeAsync(CeCheng.SmartScenicSpot.Models.ZaJiInfoTypeDto)">
+            <summary>
+            编辑闸机类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IZaJiInfoTypeInterface.QueryZaJiInfoTypeAsync(CeCheng.SmartScenicSpot.Models.ZaJiInfoTypeSearchParamDto)">
+            <summary>
+            查询闸机类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IZaJiInfoTypeInterface.RemoveZaJiInfoTypeAsync(System.String,System.Int32)">
+            <summary>
+            删除闸机类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IZaJiInfoTypeInterface.BattchRemoveZaJiInfoTypeAsync(System.String,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            批量删除闸机类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Contracts.SsysTaxTypeAndOprationInterface">
+            <summary>
+            09系统管理相关模块 的发票类型，发票大类，操作员相关 的CURD
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.SsysTaxTypeAndOprationInterface.AddSsysTaxType(CeCheng.SmartScenicSpot.Models.AddSsysTaxTypeDto)">
+            <summary>
+            新增 发票
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.SsysTaxTypeAndOprationInterface.EditSsysTaxType(CeCheng.SmartScenicSpot.Models.EditSsysTaxTypeDto)">
+            <summary>
+            编辑 发票
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.SsysTaxTypeAndOprationInterface.QuerySsysTaxType(CeCheng.SmartScenicSpot.Models.QuerySsysTaxType)">
+            <summary>
+            查询 发票
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.SsysTaxTypeAndOprationInterface.RemoveSsysTaxType(System.Int32)">
+            <summary>
+            移除 发票
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.SsysTaxTypeAndOprationInterface.AddSsysBigTaxType(CeCheng.SmartScenicSpot.Models.AddSsysBigTaxTypeDto)">
+            <summary>
+            新增 发票大类
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.SsysTaxTypeAndOprationInterface.EditSsysBigTaxType(CeCheng.SmartScenicSpot.Models.EditSsysBigTaxTypeDto)">
+            <summary>
+            编辑 发票大类
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.SsysTaxTypeAndOprationInterface.QuerySsysBigTaxType(CeCheng.SmartScenicSpot.Models.QuerySsysBigTaxType)">
+            <summary>
+            查询 发票大类
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.SsysTaxTypeAndOprationInterface.RemoveSsysBigTaxType(System.Int32)">
+            <summary>
+            移除 发票大类
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.SsysTaxTypeAndOprationInterface.AddSsysOperatorShift(CeCheng.SmartScenicSpot.Models.AddSsysOperatorShiftDto)">
+            <summary>
+            新增 发票大类
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.SsysTaxTypeAndOprationInterface.EditSsysOperatorShift(CeCheng.SmartScenicSpot.Models.EditSsysOperatorShiftDto)">
+            <summary>
+            编辑 发票大类
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.SsysTaxTypeAndOprationInterface.QuerySsysOperatorShift(CeCheng.SmartScenicSpot.Models.QuerySsysOpretorShiftDto)">
+            <summary>
+            查询 发票大类
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.SsysTaxTypeAndOprationInterface.RemoveSsysOperatorShift(System.Int32)">
+            <summary>
+            移除 发票大类
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Contracts.IRestaurantHolidaySpecialMainteInterface">
+            <summary>
+            餐厅设置，假日设置，部分项目维护接口
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IRestaurantHolidaySpecialMainteInterface.QueryResauranData(CeCheng.SmartScenicSpot.Models.SsysRestaurantInputDto)">
+            <summary>
+            查询餐厅设置
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IRestaurantHolidaySpecialMainteInterface.AddResauranData(CeCheng.SmartScenicSpot.Models.SsysRestaurantAddDto)">
+            <summary>
+            新增餐厅设置
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IRestaurantHolidaySpecialMainteInterface.EditResauranData(CeCheng.SmartScenicSpot.Models.SsysRestaurantEditDto)">
+            <summary>
+            编辑 餐厅设置
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IRestaurantHolidaySpecialMainteInterface.RemoveResauranData(CeCheng.SmartScenicSpot.Models.QueryByIdDto)">
+            <summary>
+            删除餐厅设置
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IRestaurantHolidaySpecialMainteInterface.AddHoliday(CeCheng.SmartScenicSpot.Models.SsyssHoliDayAddDto)">
+            <summary>
+            新增 假日
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IRestaurantHolidaySpecialMainteInterface.EditHoliday(CeCheng.SmartScenicSpot.Models.SsyssHoliDayEditDto)">
+            <summary>
+            编辑 假日
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IRestaurantHolidaySpecialMainteInterface.RemoveHoliday(CeCheng.SmartScenicSpot.Models.QueryByIdDto)">
+            <summary>
+            移除 假日
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IRestaurantHolidaySpecialMainteInterface.QueryHoliday(CeCheng.SmartScenicSpot.Models.SsyssHoliDayQueryInputDto)">
+            <summary>
+            查询 假日
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IRestaurantHolidaySpecialMainteInterface.AddTimeDiscount(CeCheng.SmartScenicSpot.Models.SayDiscTypeDto)">
+            <summary>
+            新增 时段优惠设置
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IRestaurantHolidaySpecialMainteInterface.EditTimeDiscount(CeCheng.SmartScenicSpot.Models.SayDiscTypeDto)">
+            <summary>
+            编辑 时段优惠设置
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IRestaurantHolidaySpecialMainteInterface.RemoveTimeDiscount(CeCheng.SmartScenicSpot.Models.QueryByIdDto)">
+            <summary>
+            删除 时段优惠设置
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IRestaurantHolidaySpecialMainteInterface.QueryTimeDiscount(CeCheng.SmartScenicSpot.Models.TimeDisCountInputQuery)">
+            <summary>
+            查询 时段优惠设置
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IRestaurantHolidaySpecialMainteInterface.WeekSetAdd(CeCheng.SmartScenicSpot.Models.SysWeekSetAddDto)">
+            <summary>
+            周末设置 新增
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IRestaurantHolidaySpecialMainteInterface.WeekSetEdit(CeCheng.SmartScenicSpot.Models.SysWeekSetEditDto)">
+            <summary>
+            周末设置 修改
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IRestaurantHolidaySpecialMainteInterface.WeekSetQuery(CeCheng.SmartScenicSpot.Models.BasePageDto)">
+            <summary>
+            周末设置 查询
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.IRestaurantHolidaySpecialMainteInterface.WeekSetRemove(CeCheng.SmartScenicSpot.Models.QueryByIdDto)">
+            <summary>
+            周末设置 删除
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Contracts.ILoginExitContract">
+            <summary>
+            登陆 退出 相关
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ILoginExitContract.Login(CeCheng.SmartScenicSpot.Models.LoginUserInfo)">
+            <summary>
+            登陆
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ILoginExitContract.LoginOut">
+            <summary>
+            退出
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="T:CeCheng.SmartScenicSpot.Contracts.ITestInterface">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ITestInterface.DoTest001">
+             <summary>
+            测试接口
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ITestInterface.DoTest004(CeCheng.SmartScenicSpot.Models.MarkQueryInputDto)">
+            <summary>
+            接口案例 分页强类型
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ITestInterface.GetLoginUserInfo(System.String)">
+            <summary>
+            获取登陆者的用户信息
+            </summary>
+            <param name="tokenStr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ITestInterface.RedisTest(System.String)">
+            <summary>
+            redis测试
+            </summary>
+            <param name="youname"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ITestInterface.TestException(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="msg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CeCheng.SmartScenicSpot.Contracts.ITestInterface.testsqlsugar">
+            <summary>
+            测试 sqlsuger异步事务，直接查询并写入
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
