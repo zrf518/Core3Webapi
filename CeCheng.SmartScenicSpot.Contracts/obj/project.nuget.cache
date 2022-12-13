@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BGkLskjP5+j0dnpOqw+fqmwd+fPdNN9G28EuoFS1Sdh/5xE1Eh4LWytqFSl2VNGLwqfoFzGNh9Q74edm9WtE4A==",
+  "dgSpecHash": "irJmiC5qGrCi+gdaRu0witab+JfG+DZk47mVy8EtTV46a8OjTTHb3GEXItZdssEUAMHUb9TYVF4Y4BBelG4Ggg==",
   "success": true,
-  "projectFilePath": "D:\\_Myfiles\\_Code\\_testCore3Demo\\CeChengWebApi\\CeCheng.SmartScenicSpot.Contracts\\CeCheng.SmartScenicSpot.Contracts.csproj",
+  "projectFilePath": "D:\\_Myfiles\\_Code\\_testCore3Demo\\testcode3\\Core3Webapi\\CeCheng.SmartScenicSpot.Contracts\\CeCheng.SmartScenicSpot.Contracts.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\google.protobuf\\3.19.4\\google.protobuf.3.19.4.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+Jc3tJFX/LUuSWPIJxvO0YB4pH1pBP30dSKe1aKfXS2GsiJYW8ZO30UAJVA/Goc3VA63x1HHgCsurXb6S6pe2A==",
+  "dgSpecHash": "PpaBTBctEUHZxTQ8CBZbx8JvqOW0GeX7xzXRzPiiuTk0Hl0NSEGlMsUrqbCwivYV1G2Xo47X5AFRvsDFznQT1w==",
   "success": true,
-  "projectFilePath": "D:\\_Myfiles\\_Code\\_testCore3Demo\\CeChengWebApi\\CeCheng.SmartScenicSpot.Services\\CeCheng.SmartScenicSpot.Services.csproj",
+  "projectFilePath": "D:\\_Myfiles\\_Code\\_testCore3Demo\\testcode3\\Core3Webapi\\CeCheng.SmartScenicSpot.Services\\CeCheng.SmartScenicSpot.Services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

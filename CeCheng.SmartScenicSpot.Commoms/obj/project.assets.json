@@ -10101,11 +10101,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\_Myfiles\\_Code\\_testCore3Demo\\CeChengWebApi\\CeCheng.SmartScenicSpot.Commoms\\CeCheng.SmartScenicSpot.Commoms.csproj",
+      "projectUniqueName": "D:\\_Myfiles\\_Code\\_testCore3Demo\\testcode3\\Core3Webapi\\CeCheng.SmartScenicSpot.Commoms\\CeCheng.SmartScenicSpot.Commoms.csproj",
       "projectName": "CeCheng.SmartScenicSpot.Commoms",
-      "projectPath": "D:\\_Myfiles\\_Code\\_testCore3Demo\\CeChengWebApi\\CeCheng.SmartScenicSpot.Commoms\\CeCheng.SmartScenicSpot.Commoms.csproj",
+      "projectPath": "D:\\_Myfiles\\_Code\\_testCore3Demo\\testcode3\\Core3Webapi\\CeCheng.SmartScenicSpot.Commoms\\CeCheng.SmartScenicSpot.Commoms.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "D:\\_Myfiles\\_Code\\_testCore3Demo\\CeChengWebApi\\CeCheng.SmartScenicSpot.Commoms\\obj\\",
+      "outputPath": "D:\\_Myfiles\\_Code\\_testCore3Demo\\testcode3\\Core3Webapi\\CeCheng.SmartScenicSpot.Commoms\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -10122,8 +10122,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\_Myfiles\\_Code\\_testCore3Demo\\CeChengWebApi\\CeCheng.SmartScenicSpot.Models\\CeCheng.SmartScenicSpot.Models.csproj": {
-              "projectPath": "D:\\_Myfiles\\_Code\\_testCore3Demo\\CeChengWebApi\\CeCheng.SmartScenicSpot.Models\\CeCheng.SmartScenicSpot.Models.csproj"
+            "D:\\_Myfiles\\_Code\\_testCore3Demo\\testcode3\\Core3Webapi\\CeCheng.SmartScenicSpot.Models\\CeCheng.SmartScenicSpot.Models.csproj": {
+              "projectPath": "D:\\_Myfiles\\_Code\\_testCore3Demo\\testcode3\\Core3Webapi\\CeCheng.SmartScenicSpot.Models\\CeCheng.SmartScenicSpot.Models.csproj"
             }
           }
         }

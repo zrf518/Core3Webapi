@@ -7438,11 +7438,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\_Myfiles\\_Code\\_testCore3Demo\\CeChengWebApi\\CeCheng.SmartScenicSpot.Models\\CeCheng.SmartScenicSpot.Models.csproj",
+      "projectUniqueName": "D:\\_Myfiles\\_Code\\_testCore3Demo\\testcode3\\Core3Webapi\\CeCheng.SmartScenicSpot.Models\\CeCheng.SmartScenicSpot.Models.csproj",
       "projectName": "CeCheng.SmartScenicSpot.Models",
-      "projectPath": "D:\\_Myfiles\\_Code\\_testCore3Demo\\CeChengWebApi\\CeCheng.SmartScenicSpot.Models\\CeCheng.SmartScenicSpot.Models.csproj",
+      "projectPath": "D:\\_Myfiles\\_Code\\_testCore3Demo\\testcode3\\Core3Webapi\\CeCheng.SmartScenicSpot.Models\\CeCheng.SmartScenicSpot.Models.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "D:\\_Myfiles\\_Code\\_testCore3Demo\\CeChengWebApi\\CeCheng.SmartScenicSpot.Models\\obj\\",
+      "outputPath": "D:\\_Myfiles\\_Code\\_testCore3Demo\\testcode3\\Core3Webapi\\CeCheng.SmartScenicSpot.Models\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
