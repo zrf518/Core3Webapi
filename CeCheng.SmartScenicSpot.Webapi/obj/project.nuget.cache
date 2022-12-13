@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "eErF7FuUrBustLIls9zEapnF5BuCN++FQxuflAzdNVi7yQmQfLL10QA12LJ8qnzqqbdF6pizJYtPVhggMpvMaA==",
+  "dgSpecHash": "Sjdf+vv08VZVqrAyth/OjLelO/lVyURjJ1FdDAUxXmDk5RgKQesEdkgvIc9xXQmLErBUa0oXvhhSfdCCAm2bXA==",
   "success": true,
-  "projectFilePath": "D:\\_Myfiles\\_Code\\_testCore3Demo\\CeChengWebApi\\CeCheng.SmartScenicSpot.Webapi\\CeCheng.SmartScenicSpot.Webapi.csproj",
+  "projectFilePath": "D:\\_Myfiles\\_Code\\_testCore3Demo\\testcode3\\Core3Webapi\\CeCheng.SmartScenicSpot.Webapi\\CeCheng.SmartScenicSpot.Webapi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\alipay.aopsdk.core\\2.5.0.1\\alipay.aopsdk.core.2.5.0.1.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\autofac\\4.9.1\\autofac.4.9.1.nupkg.sha512",
